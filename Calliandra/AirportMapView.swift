@@ -7,36 +7,32 @@ import MapKit
 import CoreLocation
 
 struct AirportMapView: View {
-    @StateObject var model = Model()
+    @StateObject var model = Model().load()
     @State private var position: MapCameraPosition = .automatic
-    @State private var selection: Int?
+    @State private var selection: Airport?
 
     var body: some View {
         Map(position: $position, interactionModes: .all) {
             if selection != nil {
-                let airport = model.airports[selection!]
-                let airportCoordinate = airport.coordinate
-                let flights = model.flightsByOrigin[airport.id]!
-                ForEach(flights) { flight in
+                ForEach(selection!.connections) { connection in
                     MapPolyline(coordinates: [
-                        airportCoordinate,
-                        model.airport(name: flight.destination)!.coordinate
+                        selection!.coordinate,
+                        connection.coordinate
                     ], contourStyle: .geodesic)
                     .stroke(.secondary, lineWidth: 1.0)
                 }
             }
 
-            ForEach(0..<model.airports.count) { i in
-                let airport = model.airports[i]
-                let isMajor = (model.flightsByOrigin[airport.id]?.count ?? 0 > 6)
-                let isSelected = (i == selection)
+            ForEach(model.airports) { airport in
+                let isMajor = (airport.flights.count > 6)
+                let isSelected = (airport == selection)
                 Annotation(airport.name, coordinate: airport.coordinate) {
                     Image(systemName: "airplane.circle.fill")
                         .foregroundStyle(.primary)
                         .imageScale((isMajor || isSelected) ? .large : .small)
                         .symbolRenderingMode(isSelected ? .multicolor : .hierarchical)
                         .onTapGesture {
-                            selection = i
+                            selection = airport
                             position = .item(MKMapItem(placemark: MKPlacemark(coordinate: airport.coordinate)), allowsAutomaticPitch: true)
                         }
                 }
