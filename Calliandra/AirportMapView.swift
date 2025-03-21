@@ -28,12 +28,15 @@ struct AirportMapView: View {
                 let isSelected = (airport == selection)
                 Annotation(airport.name, coordinate: airport.coordinate) {
                     Image(systemName: "airplane.circle.fill")
+                        .clipShape(Circle())
                         .foregroundStyle(.primary)
                         .imageScale((isMajor || isSelected) ? .large : .small)
                         .symbolRenderingMode(isSelected ? .multicolor : .hierarchical)
                         .onTapGesture {
                             selection = airport
-                            position = .item(MKMapItem(placemark: MKPlacemark(coordinate: airport.coordinate)), allowsAutomaticPitch: true)
+                            withAnimation(.easeOut) {
+                                position = .region(findBound(for: airport.connections + [airport]))
+                            }
                         }
                 }
             }
@@ -49,6 +52,29 @@ struct AirportMapView: View {
             showsTraffic: false
         ))
     }
+}
+
+func findBound(for airports: [Airport]) -> MKCoordinateRegion {
+    var minLat = 90.0, minLng = 180.0, maxLat = 0.0, maxLng = 0.0
+
+    for airport in airports {
+        minLat = min(minLat, airport.latitude)
+        minLng = min(minLng, airport.longitude)
+        maxLat = max(maxLat, airport.latitude)
+        maxLng = max(maxLng, airport.longitude)
+    }
+
+    let center = CLLocationCoordinate2D(
+        latitude: (minLat + maxLat) / 2,
+        longitude: (minLng + maxLng) / 2
+    )
+
+    let span = MKCoordinateSpan(
+        latitudeDelta: (maxLat - minLat) * 1.2,
+        longitudeDelta: (maxLng - minLng) * 1.1
+    )
+
+    return MKCoordinateRegion(center: center, span: span)
 }
 
 #Preview {
