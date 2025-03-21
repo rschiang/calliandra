@@ -10,4 +10,8 @@ struct Flight: Identifiable, Codable, Equatable {
     let destination: String
     let departureTime: String
     let arrivalTime: String
+
+    static func ==(lhs: Flight, rhs: Flight) -> Bool {
+        lhs.id == rhs.id
+    }
 }

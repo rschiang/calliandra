@@ -8,11 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		2B141C642D8CA8CA00091045 /* airports.json in Resources */ = {isa = PBXBuildFile; fileRef = 2B141C632D8CA8CA00091045 /* airports.json */; };
+		2B797A6C2D8D7640006016B2 /* flights.json in Resources */ = {isa = PBXBuildFile; fileRef = 2B797A6B2D8D7640006016B2 /* flights.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2B141C4B2D8C841200091045 /* Calliandra.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calliandra.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B141C632D8CA8CA00091045 /* airports.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = airports.json; sourceTree = "<group>"; };
+		2B797A6B2D8D7640006016B2 /* flights.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = flights.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -37,6 +39,7 @@
 		2B141C422D8C841200091045 = {
 			isa = PBXGroup;
 			children = (
+				2B797A6B2D8D7640006016B2 /* flights.json */,
 				2B141C632D8CA8CA00091045 /* airports.json */,
 				2B141C4D2D8C841200091045 /* Calliandra */,
 				2B141C4C2D8C841200091045 /* Products */,
@@ -115,6 +118,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B797A6C2D8D7640006016B2 /* flights.json in Resources */,
 				2B141C642D8CA8CA00091045 /* airports.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
