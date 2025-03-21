@@ -51,6 +51,14 @@ struct AirportMapView: View {
             pointsOfInterest: .including([.museum, .castle, .fortress, .landmark, .nationalMonument, .nationalPark, .amusementPark, .aquarium, .beach, .park, .zoo, .hiking, .publicTransport]),
             showsTraffic: false
         ))
+        .onTapGesture {
+            if selection != nil {
+                selection = nil
+                withAnimation(.easeOut) {
+                    position = .region(findBound(for: model.airports))
+                }
+            }
+        }
     }
 }
 
