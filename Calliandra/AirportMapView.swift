@@ -13,6 +13,19 @@ struct AirportMapView: View {
 
     var body: some View {
         Map(position: $position, interactionModes: .all) {
+            if selection != nil {
+                let airport = model.airports[selection!]
+                let airportCoordinate = airport.coordinate
+                let flights = model.flightsByOrigin[airport.id]!
+                ForEach(flights) { flight in
+                    MapPolyline(coordinates: [
+                        airportCoordinate,
+                        model.airport(name: flight.destination)!.coordinate
+                    ], contourStyle: .geodesic)
+                    .stroke(.secondary, lineWidth: 1.0)
+                }
+            }
+
             ForEach(0..<model.airports.count) { i in
                 let airport = model.airports[i]
                 let isMajor = (model.flightsByOrigin[airport.id]?.count ?? 0 > 6)
@@ -29,6 +42,7 @@ struct AirportMapView: View {
                 }
             }
         }
+        .ignoresSafeArea()
         .mapControls {
             MapZoomStepper()
         }

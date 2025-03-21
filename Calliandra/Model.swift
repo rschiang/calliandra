@@ -8,15 +8,23 @@ class Model: ObservableObject {
     @Published var airports: [Airport]
     @Published var flights: [Flight]
     @Published var flightsByOrigin: [String: [Flight]]
+    private var airportsByName: [String: Int]
 
     init() {
         let airports: [Airport] = Model.loadFile(fileName: "airports")
         let flights: [Flight] = Model.loadFile(fileName: "flights")
         let flightsByOrigin = Dictionary(grouping: flights, by: { $0.origin })
 
-        self.airports = airports.filter { flightsByOrigin[$0.id] != nil }
+        let activeAirports = airports.filter { flightsByOrigin[$0.id] != nil }
+        self.airports = activeAirports
+        self.airportsByName = Dictionary(uniqueKeysWithValues: activeAirports.enumerated().map { ($1.id, $0) })
         self.flights = flights
         self.flightsByOrigin = flightsByOrigin
+    }
+
+    func airport(name: String) -> Airport? {
+        let index = self.airportsByName[name]
+        return index != nil ? self.airports[index!] : nil
     }
 
     static func loadFile<T: Decodable>(fileName: String) -> [T] {
