@@ -16,7 +16,6 @@ struct AirportMapView: View {
                 columnVisibility = .all
                 position = .region(findBound(for: selection!.connections.map(\.destination) + [selection!]))
             } else {
-                columnVisibility = .detailOnly
                 position = .region(findBound(for: model.airports))
             }
         }
@@ -38,7 +37,7 @@ struct AirportMapView: View {
                     Spacer()
                     List {
                         ForEach(selection!.connections) { connection in
-                            VStack {
+                            VStackLayout(alignment: .leading) {
                                 HStack {
                                     Text(connection.destination.name)
                                         .font(.headline)
@@ -51,7 +50,7 @@ struct AirportMapView: View {
                                     ForEach(connection.flights) { flight in
                                         Text(flight.departureTime)
                                             .fixedSize()
-                                            .clipShape(Capsule())
+                                            .foregroundStyle(.tertiary)
                                     }
                                 }
                             }
@@ -72,7 +71,7 @@ struct AirportMapView: View {
                             selection!.coordinate,
                             connection.destination.coordinate,
                         ], contourStyle: .geodesic)
-                        .stroke(.secondary, lineWidth: 0.5 + Double(min(max(connection.flights.count, 1), 6)) * 0.25)
+                        .stroke(.secondary.opacity(0.5), lineWidth: 0.5 + Double(min(max(connection.flights.count, 1), 6)) * 0.25)
                     }
                 }
 
@@ -81,10 +80,10 @@ struct AirportMapView: View {
                     let isSelected = (airport == selection)
                     Annotation(airport.name, coordinate: airport.coordinate) {
                         Image(systemName: "airplane.circle.fill")
-                            .clipShape(Circle())
-                            .foregroundStyle(.primary)
+                            .symbolRenderingMode(.palette)
+                            .foregroundStyle(isSelected ? Color.white : Color.accentColor, isSelected ? Color.accentColor : Color.accentColor.opacity(0.25))
                             .imageScale((isMajor || isSelected) ? .large : .small)
-                            .symbolRenderingMode(isSelected ? .multicolor : .hierarchical)
+                            .clipShape(Circle())
                     }.tag(airport)
                 }
             }
