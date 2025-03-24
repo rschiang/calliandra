@@ -3,6 +3,7 @@
 //
 
 import SwiftUI
+import MapKit
 
 func loadFile<T: Decodable>(fileName: String) -> [T] {
     guard let url = Bundle.main.url(forResource: fileName, withExtension: "json") else {
@@ -16,4 +17,29 @@ func loadFile<T: Decodable>(fileName: String) -> [T] {
     } catch {
         fatalError("Error loading \(fileName): \(error)")
     }
+}
+
+func findBound(from: Airport, for airports: [Airport]) -> MKCoordinateRegion {
+    let initial = from.coordinate
+    var minLat = initial.latitude, maxLat = initial.latitude
+    var minLon = initial.longitude, maxLon = initial.longitude
+
+    for airport in airports {
+        minLat = min(minLat, airport.latitude)
+        minLon = min(minLon, airport.longitude)
+        maxLat = max(maxLat, airport.latitude)
+        maxLon = max(maxLon, airport.longitude)
+    }
+
+    let center = CLLocationCoordinate2D(
+        latitude: (minLat + maxLat) / 2,
+        longitude: (minLon + maxLon) / 2
+    )
+
+    let span = MKCoordinateSpan(
+        latitudeDelta: (maxLat - minLat) * 1.2,
+        longitudeDelta: (maxLon - minLon) * 1.2
+    )
+
+    return MKCoordinateRegion(center: center, span: span)
 }

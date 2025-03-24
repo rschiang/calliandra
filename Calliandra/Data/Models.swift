@@ -4,12 +4,15 @@
 
 import SwiftUI
 import CoreLocation
+import MapKit
 
 class Model: ObservableObject {
     @Published var airports: [Airport] = []
     @Published var flights: [Flight] = []
     fileprivate var airportsByName: [String: Airport] = [:]
     fileprivate var flightsByOrigin: [String: [Flight]] = [:]
+
+    lazy var coverage: MKCoordinateRegion = findBound(from: airports.first!, for: airports)
 
     func load() -> Self {
         let airportEntities: [AirportEntity] = loadFile(fileName: "airports")
@@ -55,6 +58,8 @@ class Airport: Identifiable, Equatable, Hashable {
         let flightsByDestination = Dictionary(grouping: flights, by: \.destination)
         return flightsByDestination.map({ Connection(origin: self, destination: model!.airportsByName[$0]!, flights: $1) }).sorted()
     }()
+
+    lazy var coverage: MKCoordinateRegion = findBound(from: self, for: connections.map(\.destination))
 
     static func == (lhs: Airport, rhs: Airport) -> Bool {
         lhs.id == rhs.id

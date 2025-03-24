@@ -14,24 +14,28 @@ struct AirportMapView: View {
         withAnimation(.easeOut) {
             if selection != nil {
                 columnVisibility = .all
-                position = .region(findBound(for: selection!.connections.map(\.destination) + [selection!]))
+                position = .region(selection!.coverage)
             } else {
-                position = .region(findBound(for: model.airports))
+                position = .region(model.coverage)
             }
         }
     } }
 
+    var sidebar: some View {
+        VStack {
+            if selection != nil {
+                AirportDetailPane(airport: selection!)
+            } else {
+                Text("Select an airport to see its routes")
+                    .font(.callout)
+                    .foregroundStyle(.secondary)
+            }
+        }
+    }
+
     var body: some View {
         NavigationSplitView(columnVisibility: $columnVisibility) {
-            VStack {
-                if selection != nil {
-                    AirportDetailPane(airport: selection!)
-                } else {
-                    Text("Select an airport to see its routes")
-                        .font(.callout)
-                        .foregroundStyle(.secondary)
-                }
-            }
+            sidebar
             .navigationSplitViewColumnWidth(min: 180, ideal: 210, max: 420)
         } detail: {
             Map(position: $position, interactionModes: [.pan, .zoom], selection: Binding(get: { selection }, set: { selection = $0 })) {
@@ -67,29 +71,6 @@ struct AirportMapView: View {
         }
         .navigationSplitViewStyle(.prominentDetail)
     }
-}
-
-func findBound(for airports: [Airport]) -> MKCoordinateRegion {
-    var minLat = 90.0, minLng = 180.0, maxLat = 0.0, maxLng = 0.0
-
-    for airport in airports {
-        minLat = min(minLat, airport.latitude)
-        minLng = min(minLng, airport.longitude)
-        maxLat = max(maxLat, airport.latitude)
-        maxLng = max(maxLng, airport.longitude)
-    }
-
-    let center = CLLocationCoordinate2D(
-        latitude: (minLat + maxLat) / 2,
-        longitude: (minLng + maxLng) / 2
-    )
-
-    let span = MKCoordinateSpan(
-        latitudeDelta: (maxLat - minLat) * 1.2,
-        longitudeDelta: (maxLng - minLng) * 1.2
-    )
-
-    return MKCoordinateRegion(center: center, span: span)
 }
 
 #Preview {
