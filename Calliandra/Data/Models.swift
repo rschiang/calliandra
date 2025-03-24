@@ -51,9 +51,10 @@ class Airport: Identifiable, Equatable, Hashable {
         model!.flightsByOrigin[id]!
     }
 
-    var connections: [Airport] {
-        Set(flights.map({ $0.destination })).map({ model!.airportsByName[$0]! })
-    }
+    lazy var connections: [Connection] = {
+        let flightsByDestination = Dictionary(grouping: flights, by: \.destination)
+        return flightsByDestination.map({ Connection(origin: self, destination: model!.airportsByName[$0]!, flights: $1) }).sorted()
+    }()
 
     static func == (lhs: Airport, rhs: Airport) -> Bool {
         lhs.id == rhs.id
@@ -89,6 +90,28 @@ class Flight: Identifiable, Equatable {
     let miles: Int
 
     static func == (lhs: Flight, rhs: Flight) -> Bool {
-        return lhs.id == rhs.id
+        lhs.id == rhs.id
+    }
+}
+
+class Connection: Identifiable, Equatable, Comparable {
+    let id: String
+    unowned let origin: Airport
+    unowned let destination: Airport
+    let flights: [Flight]
+
+    fileprivate init(origin: Airport, destination: Airport, flights: [Flight]) {
+        self.id = origin.id + destination.id
+        self.origin = origin
+        self.destination = destination
+        self.flights = flights.sorted { $0.departureTime < $1.departureTime }
+    }
+
+    static func < (lhs: Connection, rhs: Connection) -> Bool {
+        !(lhs.flights.count < rhs.flights.count || lhs.flights.first!.departureTime > rhs.flights.first!.departureTime)
+    }
+
+    static func == (lhs: Connection, rhs: Connection) -> Bool {
+        lhs.origin == rhs.origin && lhs.destination == rhs.destination
     }
 }

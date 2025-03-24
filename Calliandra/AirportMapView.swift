@@ -14,7 +14,7 @@ struct AirportMapView: View {
         withAnimation(.easeOut) {
             if selection != nil {
                 columnVisibility = .all
-                position = .region(findBound(for: selection!.connections + [selection!]))
+                position = .region(findBound(for: selection!.connections.map(\.destination) + [selection!]))
             } else {
                 columnVisibility = .detailOnly
                 position = .region(findBound(for: model.airports))
@@ -38,12 +38,22 @@ struct AirportMapView: View {
                     Spacer()
                     List {
                         ForEach(selection!.connections) { connection in
-                            HStack {
-                                Text(connection.name)
-                                Spacer()
-                                Text(connection.id)
-                                    .monospaced()
-                                    .foregroundStyle(.secondary)
+                            VStack {
+                                HStack {
+                                    Text(connection.destination.name)
+                                        .font(.headline)
+                                    Spacer()
+                                    Text(connection.destination.id)
+                                        .monospaced()
+                                        .foregroundStyle(.secondary)
+                                }
+                                HStackLayout(spacing: 4) {
+                                    ForEach(connection.flights) { flight in
+                                        Text(flight.departureTime)
+                                            .fixedSize()
+                                            .clipShape(Capsule())
+                                    }
+                                }
                             }
                         }
                     }
@@ -60,9 +70,9 @@ struct AirportMapView: View {
                     ForEach(selection!.connections) { connection in
                         MapPolyline(coordinates: [
                             selection!.coordinate,
-                            connection.coordinate
+                            connection.destination.coordinate,
                         ], contourStyle: .geodesic)
-                        .stroke(.secondary, lineWidth: 1.0)
+                        .stroke(.secondary, lineWidth: 0.5 + Double(min(max(connection.flights.count, 1), 6)) * 0.25)
                     }
                 }
 
@@ -113,7 +123,7 @@ func findBound(for airports: [Airport]) -> MKCoordinateRegion {
 
     let span = MKCoordinateSpan(
         latitudeDelta: (maxLat - minLat) * 1.2,
-        longitudeDelta: (maxLng - minLng) * 1.1
+        longitudeDelta: (maxLng - minLng) * 1.2
     )
 
     return MKCoordinateRegion(center: center, span: span)
