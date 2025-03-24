@@ -13,6 +13,7 @@ struct CalliandraApp: App {
             AirportMapView()
         }
         .windowStyle(.hiddenTitleBar)
+        .windowToolbarStyle(.unifiedCompact)
     }
 }
 

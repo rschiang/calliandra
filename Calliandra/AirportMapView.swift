@@ -31,6 +31,7 @@ struct AirportMapView: View {
                             .font(.title)
                         Spacer()
                         Text(selection!.id)
+                            .font(.title2)
                             .monospaced()
                             .foregroundStyle(.secondary)
                     }.padding(.horizontal, 16)
@@ -52,6 +53,7 @@ struct AirportMapView: View {
                         .foregroundStyle(.secondary)
                 }
             }
+            .navigationSplitViewColumnWidth(min: 180, ideal: 210)
         } detail: {
             Map(position: $position, interactionModes: [.pan, .zoom], selection: Binding(get: { selection }, set: { selection = $0 })) {
                 if selection != nil {
@@ -90,6 +92,7 @@ struct AirportMapView: View {
                 showsTraffic: false
             ))
         }
+        .navigationSplitViewStyle(.prominentDetail)
     }
 }
 
