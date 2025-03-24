@@ -53,7 +53,7 @@ struct AirportMapView: View {
                 }
             }
         } detail: {
-            Map(position: $position, interactionModes: [.pan, .zoom]) {
+            Map(position: $position, interactionModes: [.pan, .zoom], selection: Binding(get: { selection }, set: { selection = $0 })) {
                 if selection != nil {
                     ForEach(selection!.connections) { connection in
                         MapPolyline(coordinates: [
@@ -73,10 +73,7 @@ struct AirportMapView: View {
                             .foregroundStyle(.primary)
                             .imageScale((isMajor || isSelected) ? .large : .small)
                             .symbolRenderingMode(isSelected ? .multicolor : .hierarchical)
-                            .onTapGesture {
-                                selection = airport
-                            }
-                    }
+                    }.tag(airport)
                 }
             }
             .ignoresSafeArea()
@@ -92,11 +89,6 @@ struct AirportMapView: View {
                     .beach, .park, .zoo, .hiking, .publicTransport]),
                 showsTraffic: false
             ))
-            .onTapGesture {
-                if selection != nil {
-                    selection = nil
-                }
-            }
         }
     }
 }

@@ -27,7 +27,7 @@ class Model: ObservableObject {
     }
 }
 
-class Airport: Identifiable, Equatable {
+class Airport: Identifiable, Equatable, Hashable {
     private unowned let model: Model?
 
     fileprivate init(model: Model, entity: AirportEntity) {
@@ -57,6 +57,10 @@ class Airport: Identifiable, Equatable {
 
     static func == (lhs: Airport, rhs: Airport) -> Bool {
         lhs.id == rhs.id
+    }
+
+    func hash(into hasher: inout Hasher) {
+        id.hash(into: &hasher)
     }
 }
 
