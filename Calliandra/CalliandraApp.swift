@@ -12,6 +12,7 @@ struct CalliandraApp: App {
         WindowGroup {
             AirportMapView()
         }
+        .windowStyle(.hiddenTitleBar)
     }
 }
 
