@@ -25,44 +25,14 @@ struct AirportMapView: View {
         NavigationSplitView(columnVisibility: $columnVisibility) {
             VStack {
                 if selection != nil {
-                    HStack {
-                        Text(selection!.name)
-                            .font(.title)
-                        Spacer()
-                        Text(selection!.id)
-                            .font(.title2)
-                            .monospaced()
-                            .foregroundStyle(.secondary)
-                    }.padding(.horizontal, 16)
-                    Spacer()
-                    List {
-                        ForEach(selection!.connections) { connection in
-                            VStackLayout(alignment: .leading) {
-                                HStack {
-                                    Text(connection.destination.name)
-                                        .font(.headline)
-                                    Spacer()
-                                    Text(connection.destination.id)
-                                        .monospaced()
-                                        .foregroundStyle(.secondary)
-                                }
-                                HStackLayout(spacing: 4) {
-                                    ForEach(connection.flights) { flight in
-                                        Text(flight.departureTime)
-                                            .fixedSize()
-                                            .foregroundStyle(.tertiary)
-                                    }
-                                }
-                            }
-                        }
-                    }
+                    AirportDetailPane(airport: selection!)
                 } else {
                     Text("Select an airport to see its routes")
                         .font(.callout)
                         .foregroundStyle(.secondary)
                 }
             }
-            .navigationSplitViewColumnWidth(min: 180, ideal: 210)
+            .navigationSplitViewColumnWidth(min: 180, ideal: 210, max: 420)
         } detail: {
             Map(position: $position, interactionModes: [.pan, .zoom], selection: Binding(get: { selection }, set: { selection = $0 })) {
                 if selection != nil {
@@ -76,14 +46,8 @@ struct AirportMapView: View {
                 }
 
                 ForEach(model.airports) { airport in
-                    let isMajor = (airport.flights.count > 6)
-                    let isSelected = (airport == selection)
                     Annotation(airport.name, coordinate: airport.coordinate) {
-                        Image(systemName: "airplane.circle.fill")
-                            .symbolRenderingMode(.palette)
-                            .foregroundStyle(isSelected ? Color.white : Color.accentColor, isSelected ? Color.accentColor : Color.accentColor.opacity(0.25))
-                            .imageScale((isMajor || isSelected) ? .large : .small)
-                            .clipShape(Circle())
+                        AirportMapItem(isMajor: (airport.flights.count >= 10), isSelected: (airport == selection))
                     }.tag(airport)
                 }
             }

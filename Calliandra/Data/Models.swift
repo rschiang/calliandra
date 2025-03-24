@@ -108,7 +108,10 @@ class Connection: Identifiable, Equatable, Comparable {
     }
 
     static func < (lhs: Connection, rhs: Connection) -> Bool {
-        !(lhs.flights.count < rhs.flights.count || lhs.flights.first!.departureTime > rhs.flights.first!.departureTime)
+        if lhs.flights.count != rhs.flights.count {
+            return lhs.flights.count > rhs.flights.count
+        }
+        return lhs.flights.first!.departureTime < rhs.flights.first!.departureTime
     }
 
     static func == (lhs: Connection, rhs: Connection) -> Bool {
