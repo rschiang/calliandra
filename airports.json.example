@@ -1,0 +1,44 @@
+[
+  {
+    "id": "FKS",
+    "name": "福島",
+    "latitude": 37.2269039,
+    "longitude": 140.4262745,
+    "country": "JP"
+  },
+  {
+    "id": "HND",
+    "name": "東京羽田",
+    "latitude": 35.5493385,
+    "longitude": 139.7777406,
+    "country": "JP"
+  },
+  {
+    "id": "NTQ",
+    "name": "能登",
+    "latitude": 37.2952139,
+    "longitude": 136.9553962,
+    "country": "JP"
+  },
+  {
+    "id": "TKS",
+    "name": "徳島",
+    "latitude": 34.1345023,
+    "longitude": 134.6158168,
+    "country": "JP"
+  },
+  {
+    "id": "KMJ",
+    "name": "熊本",
+    "latitude": 32.8369716,
+    "longitude": 130.8606338,
+    "country": "JP"
+  },
+  {
+    "id": "OGN",
+    "name": "与那国",
+    "latitude": 24.4659435,
+    "longitude": 122.977573,
+    "country": "JP"
+  }
+]
