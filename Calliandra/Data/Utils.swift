@@ -4,6 +4,8 @@
 
 import SwiftUI
 import MapKit
+import CoreLocation
+import Foundation
 
 func loadFile<T: Decodable>(fileName: String) -> [T] {
     guard let url = Bundle.main.url(forResource: fileName, withExtension: "json") else {
@@ -42,4 +44,35 @@ func findBound(from: Airport, for airports: [Airport]) -> MKCoordinateRegion {
     )
 
     return MKCoordinateRegion(center: center, span: span)
+}
+
+func greatCircleMiles(from origin: Airport, to destination: Airport) -> Int {
+    let originLocation = CLLocation(latitude: origin.latitude, longitude: origin.longitude)
+    let destinationLocation = CLLocation(latitude: destination.latitude, longitude: destination.longitude)
+    let meters = originLocation.distance(from: destinationLocation)
+    return Int((meters / 1609.344).rounded())
+}
+
+func flightDuration(from departureTime: String, to arrivalTime: String) -> String? {
+    let formatter = DateFormatter()
+    formatter.dateFormat = "HH:mm"
+    formatter.locale = Locale(identifier: "en_US_POSIX")
+
+    guard let departure = formatter.date(from: departureTime),
+          var arrival = formatter.date(from: arrivalTime) else {
+        return nil
+    }
+
+    if arrival < departure {
+        arrival = Calendar.current.date(byAdding: .day, value: 1, to: arrival) ?? arrival
+    }
+
+    let minutes = Int(arrival.timeIntervalSince(departure) / 60)
+    let hours = minutes / 60
+    let remainingMinutes = minutes % 60
+
+    if hours == 0 {
+        return "\(remainingMinutes)m"
+    }
+    return "\(hours)h \(remainingMinutes)m"
 }

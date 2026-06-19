@@ -9,67 +9,165 @@ import CoreLocation
 struct AirportMapView: View {
     @StateObject var model = Model().load()
     @State private var position: MapCameraPosition = .automatic
-    @State private var columnVisibility: NavigationSplitViewVisibility = .detailOnly
-    @State private var selection: Airport? { didSet {
-        withAnimation(.easeOut) {
-            if selection != nil {
-                columnVisibility = .all
-                position = .region(selection!.coverage)
-            } else {
-                position = .region(model.coverage)
-            }
+    @State private var columnVisibility: NavigationSplitViewVisibility = .all
+    @State private var selectedAirport: Airport?
+    @State private var routeStops: [RouteStop] = []
+    @State private var airportCodeInput = ""
+    @State private var routeInputError: String?
+
+    private var routePairs: [(index: Int, origin: Airport, destination: Airport)] {
+        guard routeStops.count > 1 else { return [] }
+        return routeStops.indices.dropLast().map { index in
+            (index, routeStops[index].airport, routeStops[index + 1].airport)
         }
-    } }
+    }
+
+    private var lastRouteAirport: Airport? {
+        routeStops.last?.airport
+    }
+
+    private var routeAirportIDs: Set<String> {
+        Set(routeStops.map(\.airport.id))
+    }
+
+    private var suggestedConnectionIDs: Set<String> {
+        guard let lastRouteAirport else { return [] }
+        return Set(lastRouteAirport.connections.map(\.destination.id))
+    }
 
     var sidebar: some View {
-        VStack {
-            if selection != nil {
-                AirportDetailPane(airport: selection!)
-            } else {
-                Text("Select an airport to see its routes")
-                    .font(.callout)
-                    .foregroundStyle(.secondary)
-            }
-        }
+        RoutePlannerPane(
+            model: model,
+            routeStops: $routeStops,
+            airportCodeInput: $airportCodeInput,
+            inputError: routeInputError,
+            onSubmitAirportCode: addAirportCodeToRoute,
+            onClearRoute: clearRoute
+        )
     }
 
     var body: some View {
         NavigationSplitView(columnVisibility: $columnVisibility) {
             sidebar
-            .navigationSplitViewColumnWidth(min: 180, ideal: 210, max: 420)
+                .navigationSplitViewColumnWidth(min: 260, ideal: 340, max: 460)
         } detail: {
-            Map(position: $position, interactionModes: [.pan, .zoom], selection: Binding(get: { selection }, set: { selection = $0 })) {
-                if selection != nil {
-                    ForEach(selection!.connections) { connection in
-                        MapPolyline(coordinates: [
-                            selection!.coordinate,
-                            connection.destination.coordinate,
-                        ], contourStyle: .geodesic)
-                        .stroke(.secondary.opacity(0.5), lineWidth: 0.5 + Double(min(max(connection.flights.count, 1), 6)) * 0.25)
-                    }
+            ZStack(alignment: .topTrailing) {
+                Map(position: $position, interactionModes: [.pan, .zoom], selection: Binding(get: { selectedAirport }, set: { selectedAirport = $0 })) {
+                    lastAirportConnections
+                    plannedRoute
+                    airportAnnotations
                 }
+                .ignoresSafeArea()
+                .mapControls {
+                    MapZoomStepper()
+                }
+                .mapStyle(.standard(
+                    elevation: .realistic,
+                    emphasis: .muted,
+                    pointsOfInterest: .including([
+                        .museum, .castle, .fortress, .landmark, .nationalMonument,
+                        .nationalPark, .amusementPark, .aquarium,
+                        .beach, .park, .zoo, .hiking, .publicTransport]),
+                    showsTraffic: false
+                ))
 
-                ForEach(model.airports) { airport in
-                    Annotation(airport.name, coordinate: airport.coordinate) {
-                        AirportMapItem(isMajor: (airport.flights.count >= 10), isSelected: (airport == selection))
-                    }.tag(airport)
+                if let selectedAirport {
+                    AirportDetailPopup(
+                        airport: selectedAirport,
+                        onAddToRoute: { addAirportToRoute(selectedAirport) },
+                        onDismiss: { self.selectedAirport = nil }
+                    )
+                    .padding(20)
                 }
             }
-            .ignoresSafeArea()
-            .mapControls {
-                MapZoomStepper()
-            }
-            .mapStyle(.standard(
-                elevation: .realistic,
-                emphasis: .muted,
-                pointsOfInterest: .including([
-                    .museum, .castle, .fortress, .landmark, .nationalMonument,
-                    .nationalPark, .amusementPark, .aquarium,
-                    .beach, .park, .zoo, .hiking, .publicTransport]),
-                showsTraffic: false
-            ))
         }
         .navigationSplitViewStyle(.prominentDetail)
+        .onAppear {
+            position = .region(model.coverage)
+        }
+        .onChange(of: routeStops) { _, _ in
+            updateMapPosition()
+        }
+    }
+
+    @MapContentBuilder
+    private var lastAirportConnections: some MapContent {
+        if let lastRouteAirport {
+            ForEach(lastRouteAirport.connections) { connection in
+                MapPolyline(coordinates: [
+                    lastRouteAirport.coordinate,
+                    connection.destination.coordinate,
+                ], contourStyle: .geodesic)
+                .stroke(.secondary.opacity(0.45), lineWidth: 0.5 + Double(min(max(connection.flights.count, 1), 6)) * 0.25)
+            }
+        }
+    }
+
+    @MapContentBuilder
+    private var plannedRoute: some MapContent {
+        ForEach(routePairs.indices, id: \.self) { index in
+            let pair = routePairs[index]
+            MapPolyline(coordinates: [
+                pair.origin.coordinate,
+                pair.destination.coordinate,
+            ], contourStyle: .geodesic)
+            .stroke(.blue, lineWidth: 3)
+        }
+    }
+
+    @MapContentBuilder
+    private var airportAnnotations: some MapContent {
+        ForEach(model.airports) { airport in
+            Annotation(airport.name, coordinate: airport.coordinate) {
+                AirportMapItem(
+                    isMajor: (airport.flights.count >= 10),
+                    isSelected: (airport == selectedAirport),
+                    isInRoute: routeAirportIDs.contains(airport.id),
+                    isLastRouteStop: (airport == lastRouteAirport),
+                    isSuggestedConnection: suggestedConnectionIDs.contains(airport.id)
+                )
+            }
+            .tag(airport)
+        }
+    }
+
+    private func addAirportCodeToRoute() {
+        let code = airportCodeInput.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
+
+        guard !code.isEmpty else {
+            routeInputError = "Enter an airport code."
+            return
+        }
+
+        guard let airport = model.airport(forCode: code) else {
+            routeInputError = "Unknown airport code."
+            return
+        }
+
+        addAirportToRoute(airport)
+    }
+
+    private func addAirportToRoute(_ airport: Airport) {
+        routeStops.append(RouteStop(airport: airport))
+        airportCodeInput = ""
+        routeInputError = nil
+    }
+
+    private func clearRoute() {
+        routeStops.removeAll()
+        routeInputError = nil
+    }
+
+    private func updateMapPosition() {
+        withAnimation(.easeOut) {
+            if routeStops.count > 1 {
+                position = .region(findBound(from: routeStops[0].airport, for: routeStops.dropFirst().map(\.airport)))
+            } else if let lastRouteAirport {
+                position = .region(lastRouteAirport.coverage)
+            } else {
+                position = .region(model.coverage)
+            }
+        }
     }
 }
 
