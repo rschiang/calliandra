@@ -12,8 +12,6 @@ struct AirportMapView: View {
     @State private var columnVisibility: NavigationSplitViewVisibility = .all
     @State private var selectedAirport: Airport?
     @State private var routeStops: [RouteStop] = []
-    @State private var airportCodeInput = ""
-    @State private var routeInputError: String?
 
     private var routePairs: [(index: Int, origin: Airport, destination: Airport)] {
         guard routeStops.count > 1 else { return [] }
@@ -39,11 +37,10 @@ struct AirportMapView: View {
         RoutePlannerPane(
             model: model,
             routeStops: $routeStops,
-            airportCodeInput: $airportCodeInput,
-            inputError: routeInputError,
             onSubmitAirportCode: addAirportCodeToRoute,
             onClearRoute: clearRoute
         )
+        .padding(.horizontal)
     }
 
     var body: some View {
@@ -131,31 +128,16 @@ struct AirportMapView: View {
         }
     }
 
-    private func addAirportCodeToRoute() {
-        let code = airportCodeInput.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
-
-        guard !code.isEmpty else {
-            routeInputError = "Enter an airport code."
-            return
-        }
-
-        guard let airport = model.airport(forCode: code) else {
-            routeInputError = "Unknown airport code."
-            return
-        }
-
-        addAirportToRoute(airport)
+    private func addAirportCodeToRoute(_ airportCode: String) {
+        addAirportToRoute(model.airport(forCode: airportCode)!)
     }
 
     private func addAirportToRoute(_ airport: Airport) {
         routeStops.append(RouteStop(airport: airport))
-        airportCodeInput = ""
-        routeInputError = nil
     }
 
     private func clearRoute() {
         routeStops.removeAll()
-        routeInputError = nil
     }
 
     private func updateMapPosition() {

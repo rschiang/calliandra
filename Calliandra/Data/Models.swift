@@ -45,6 +45,27 @@ class Model: ObservableObject {
         }
         return (greatCircleMiles(from: origin, to: destination), true)
     }
+
+    func duration(from origin: Airport, to destination: Airport) -> Duration? {
+        guard let flight = flights(from: origin, to: destination).first else {
+            return nil
+        }
+
+        let formatter = DateFormatter()
+        formatter.dateFormat = "HH:mm"
+        formatter.locale = Locale(identifier: "en_US_POSIX")
+
+        guard let departure = formatter.date(from: flight.departureTime),
+              var arrival = formatter.date(from: flight.arrivalTime) else {
+            return nil
+        }
+
+        if arrival < departure {
+            arrival = Calendar.current.date(byAdding: .day, value: 1, to: arrival) ?? arrival
+        }
+
+        return Duration.seconds(arrival.timeIntervalSince(departure))
+    }
 }
 
 struct RouteStop: Identifiable, Equatable {
