@@ -1,0 +1,3019 @@
+[
+  {
+    "id": "WKJ",
+    "name": "稚内",
+    "latitude": 45.399663,
+    "longitude": 141.7952,
+    "country": "JP"
+  },
+  {
+    "id": "RIS",
+    "name": "利尻",
+    "latitude": 45.2439967,
+    "longitude": 141.1819364,
+    "country": "JP"
+  },
+  {
+    "id": "AKJ",
+    "name": "旭川",
+    "latitude": 43.6704264,
+    "longitude": 142.4524193,
+    "country": "JP"
+  },
+  {
+    "id": "MBE",
+    "name": "紋別",
+    "latitude": 44.3064018,
+    "longitude": 143.4046474,
+    "country": "JP"
+  },
+  {
+    "id": "MMB",
+    "name": "女満別",
+    "latitude": 43.8814668,
+    "longitude": 144.1566967,
+    "country": "JP"
+  },
+  {
+    "id": "SHB",
+    "name": "中標津",
+    "latitude": 43.5728777,
+    "longitude": 144.9539675,
+    "country": "JP"
+  },
+  {
+    "id": "KUH",
+    "name": "釧路",
+    "latitude": 43.0448771,
+    "longitude": 144.1937935,
+    "country": "JP"
+  },
+  {
+    "id": "OBO",
+    "name": "帯広",
+    "latitude": 42.7312629,
+    "longitude": 143.2155934,
+    "country": "JP"
+  },
+  {
+    "id": "SPK",
+    "name": "札幌丘珠",
+    "latitude": 43.1107843,
+    "longitude": 141.3802192,
+    "country": "JP"
+  },
+  {
+    "id": "HKD",
+    "name": "函館",
+    "latitude": 41.7757083,
+    "longitude": 140.8136335,
+    "country": "JP"
+  },
+  {
+    "id": "CTS",
+    "name": "新千歳",
+    "latitude": 42.7821883,
+    "longitude": 141.6868587,
+    "country": "JP"
+  },
+  {
+    "id": "OIR",
+    "name": "奥尻",
+    "latitude": 42.0715323,
+    "longitude": 139.4309049,
+    "country": "JP"
+  },
+  {
+    "id": "AOJ",
+    "name": "青森",
+    "latitude": 40.7354626,
+    "longitude": 140.6882238,
+    "country": "JP"
+  },
+  {
+    "id": "MSJ",
+    "name": "三沢",
+    "latitude": 40.6964936,
+    "longitude": 141.3854839,
+    "country": "JP"
+  },
+  {
+    "id": "HNA",
+    "name": "花巻",
+    "latitude": 39.4286156,
+    "longitude": 141.1332149,
+    "country": "JP"
+  },
+  {
+    "id": "AXT",
+    "name": "秋田",
+    "latitude": 39.612008,
+    "longitude": 140.2179753,
+    "country": "JP"
+  },
+  {
+    "id": "ONJ",
+    "name": "大館能代",
+    "latitude": 40.195229,
+    "longitude": 140.3699859,
+    "country": "JP"
+  },
+  {
+    "id": "SYO",
+    "name": "庄内",
+    "latitude": 38.8157158,
+    "longitude": 139.7857854,
+    "country": "JP"
+  },
+  {
+    "id": "GAJ",
+    "name": "山形",
+    "latitude": 38.4105676,
+    "longitude": 140.3644866,
+    "country": "JP"
+  },
+  {
+    "id": "SDJ",
+    "name": "仙台",
+    "latitude": 38.1397264,
+    "longitude": 140.9147557,
+    "country": "JP"
+  },
+  {
+    "id": "FKS",
+    "name": "福島",
+    "latitude": 37.2269039,
+    "longitude": 140.4262745,
+    "country": "JP"
+  },
+  {
+    "id": "IBR",
+    "name": "茨城",
+    "latitude": 36.1817412,
+    "longitude": 140.4164189,
+    "country": "JP"
+  },
+  {
+    "id": "NRT",
+    "name": "東京成田",
+    "latitude": 35.7738685,
+    "longitude": 140.3872226,
+    "country": "JP"
+  },
+  {
+    "id": "HND",
+    "name": "東京羽田",
+    "latitude": 35.5493385,
+    "longitude": 139.7777406,
+    "country": "JP"
+  },
+  {
+    "id": "OIM",
+    "name": "大島",
+    "latitude": 34.7819554,
+    "longitude": 139.3593075,
+    "country": "JP"
+  },
+  {
+    "id": "MYE",
+    "name": "三宅島",
+    "latitude": 34.072162,
+    "longitude": 139.558467,
+    "country": "JP"
+  },
+  {
+    "id": "HAC",
+    "name": "八丈島",
+    "latitude": 33.1158691,
+    "longitude": 139.7836535,
+    "country": "JP"
+  },
+  {
+    "id": "KIJ",
+    "name": "新潟",
+    "latitude": 37.9554492,
+    "longitude": 139.1090485,
+    "country": "JP"
+  },
+  {
+    "id": "TOY",
+    "name": "富山",
+    "latitude": 36.6465214,
+    "longitude": 137.1851465,
+    "country": "JP"
+  },
+  {
+    "id": "KMQ",
+    "name": "小松",
+    "latitude": 36.3919415,
+    "longitude": 136.4053506,
+    "country": "JP"
+  },
+  {
+    "id": "NTQ",
+    "name": "能登",
+    "latitude": 37.2952139,
+    "longitude": 136.9553962,
+    "country": "JP"
+  },
+  {
+    "id": "MMJ",
+    "name": "松本",
+    "latitude": 36.1646638,
+    "longitude": 137.9242264,
+    "country": "JP"
+  },
+  {
+    "id": "NKM",
+    "name": "名古屋小牧",
+    "latitude": 35.2536367,
+    "longitude": 136.9177708,
+    "country": "JP"
+  },
+  {
+    "id": "NGO",
+    "name": "名古屋中部",
+    "latitude": 34.8573437,
+    "longitude": 136.793594,
+    "country": "JP"
+  },
+  {
+    "id": "FSZ",
+    "name": "静岡",
+    "latitude": 34.7964746,
+    "longitude": 138.1831328,
+    "country": "JP"
+  },
+  {
+    "id": "ITM",
+    "name": "大阪伊丹",
+    "latitude": 34.7863123,
+    "longitude": 135.4355808,
+    "country": "JP"
+  },
+  {
+    "id": "KIX",
+    "name": "関西",
+    "latitude": 34.4320024,
+    "longitude": 135.2282052,
+    "country": "JP"
+  },
+  {
+    "id": "UKB",
+    "name": "神戸",
+    "latitude": 34.6394848,
+    "longitude": 135.2228365,
+    "country": "JP"
+  },
+  {
+    "id": "TKG",
+    "name": "但馬",
+    "latitude": 35.5132938,
+    "longitude": 134.7866414,
+    "country": "JP"
+  },
+  {
+    "id": "SHM",
+    "name": "南紀白浜",
+    "latitude": 33.662184,
+    "longitude": 135.3583706,
+    "country": "JP"
+  },
+  {
+    "id": "TTJ",
+    "name": "鳥取",
+    "latitude": 35.5265417,
+    "longitude": 134.1658113,
+    "country": "JP"
+  },
+  {
+    "id": "YGJ",
+    "name": "米子",
+    "latitude": 35.4952241,
+    "longitude": 133.2381705,
+    "country": "JP"
+  },
+  {
+    "id": "IZO",
+    "name": "出雲",
+    "latitude": 35.4133422,
+    "longitude": 132.8855022,
+    "country": "JP"
+  },
+  {
+    "id": "OKI",
+    "name": "隠岐",
+    "latitude": 36.1800283,
+    "longitude": 133.3224503,
+    "country": "JP"
+  },
+  {
+    "id": "IWJ",
+    "name": "石見",
+    "latitude": 34.6781762,
+    "longitude": 131.7945565,
+    "country": "JP"
+  },
+  {
+    "id": "OKJ",
+    "name": "岡山",
+    "latitude": 34.7575788,
+    "longitude": 133.8522856,
+    "country": "JP"
+  },
+  {
+    "id": "HIJ",
+    "name": "広島",
+    "latitude": 34.436979,
+    "longitude": 132.9164029,
+    "country": "JP"
+  },
+  {
+    "id": "UBJ",
+    "name": "山口宇部",
+    "latitude": 33.931557,
+    "longitude": 131.2743829,
+    "country": "JP"
+  },
+  {
+    "id": "IWK",
+    "name": "岩国",
+    "latitude": 34.1587725,
+    "longitude": 132.2324992,
+    "country": "JP"
+  },
+  {
+    "id": "TAK",
+    "name": "高松",
+    "latitude": 34.2224481,
+    "longitude": 134.0166704,
+    "country": "JP"
+  },
+  {
+    "id": "TKS",
+    "name": "徳島",
+    "latitude": 34.1345023,
+    "longitude": 134.6158168,
+    "country": "JP"
+  },
+  {
+    "id": "MYJ",
+    "name": "松山",
+    "latitude": 33.8288211,
+    "longitude": 132.7019574,
+    "country": "JP"
+  },
+  {
+    "id": "KCZ",
+    "name": "高知",
+    "latitude": 33.5470299,
+    "longitude": 133.6706771,
+    "country": "JP"
+  },
+  {
+    "id": "KKJ",
+    "name": "北九州",
+    "latitude": 33.8392276,
+    "longitude": 131.0311486,
+    "country": "JP"
+  },
+  {
+    "id": "FUK",
+    "name": "福岡",
+    "latitude": 33.5903145,
+    "longitude": 130.4445204,
+    "country": "JP"
+  },
+  {
+    "id": "HSG",
+    "name": "佐賀",
+    "latitude": 33.1507777,
+    "longitude": 130.2996688,
+    "country": "JP"
+  },
+  {
+    "id": "KMJ",
+    "name": "熊本",
+    "latitude": 32.8369716,
+    "longitude": 130.8606338,
+    "country": "JP"
+  },
+  {
+    "id": "AXJ",
+    "name": "天草",
+    "latitude": 32.4822511,
+    "longitude": 130.1570632,
+    "country": "JP"
+  },
+  {
+    "id": "OIT",
+    "name": "大分",
+    "latitude": 33.478528,
+    "longitude": 131.7337743,
+    "country": "JP"
+  },
+  {
+    "id": "KMI",
+    "name": "宮崎",
+    "latitude": 31.8762088,
+    "longitude": 131.4451338,
+    "country": "JP"
+  },
+  {
+    "id": "NGS",
+    "name": "長崎",
+    "latitude": 32.913643,
+    "longitude": 129.916305,
+    "country": "JP"
+  },
+  {
+    "id": "TSJ",
+    "name": "対馬",
+    "latitude": 34.2859032,
+    "longitude": 129.3238869,
+    "country": "JP"
+  },
+  {
+    "id": "IKI",
+    "name": "壱岐",
+    "latitude": 33.7502681,
+    "longitude": 129.7818584,
+    "country": "JP"
+  },
+  {
+    "id": "FUJ",
+    "name": "福江",
+    "latitude": 32.6680988,
+    "longitude": 128.834784,
+    "country": "JP"
+  },
+  {
+    "id": "KOJ",
+    "name": "鹿児島",
+    "latitude": 31.8028526,
+    "longitude": 130.7158347,
+    "country": "JP"
+  },
+  {
+    "id": "TNE",
+    "name": "種子島",
+    "latitude": 30.5762997,
+    "longitude": 130.9391367,
+    "country": "JP"
+  },
+  {
+    "id": "KUM",
+    "name": "屋久島",
+    "latitude": 30.3857741,
+    "longitude": 130.656768,
+    "country": "JP"
+  },
+  {
+    "id": "ASJ",
+    "name": "奄美大島",
+    "latitude": 28.4320857,
+    "longitude": 129.7063711,
+    "country": "JP"
+  },
+  {
+    "id": "KKX",
+    "name": "喜界島",
+    "latitude": 28.3219834,
+    "longitude": 129.9267336,
+    "country": "JP"
+  },
+  {
+    "id": "TKN",
+    "name": "徳之島",
+    "latitude": 27.8357776,
+    "longitude": 128.8830458,
+    "country": "JP"
+  },
+  {
+    "id": "OKE",
+    "name": "沖永良部",
+    "latitude": 27.4397944,
+    "longitude": 128.7083395,
+    "country": "JP"
+  },
+  {
+    "id": "RNJ",
+    "name": "与論",
+    "latitude": 27.0436982,
+    "longitude": 128.3984974,
+    "country": "JP"
+  },
+  {
+    "id": "OKA",
+    "name": "那覇",
+    "latitude": 26.2064033,
+    "longitude": 127.6443535,
+    "country": "JP"
+  },
+  {
+    "id": "AGJ",
+    "name": "粟国",
+    "latitude": 26.5928022,
+    "longitude": 127.2371944,
+    "country": "JP"
+  },
+  {
+    "id": "UEO",
+    "name": "久米島",
+    "latitude": 26.3644947,
+    "longitude": 126.7127081,
+    "country": "JP"
+  },
+  {
+    "id": "KTD",
+    "name": "北大東",
+    "latitude": 25.9447762,
+    "longitude": 131.3243857,
+    "country": "JP"
+  },
+  {
+    "id": "MMD",
+    "name": "南大東",
+    "latitude": 25.8472668,
+    "longitude": 131.2617749,
+    "country": "JP"
+  },
+  {
+    "id": "MMY",
+    "name": "宮古",
+    "latitude": 24.7794618,
+    "longitude": 125.2951601,
+    "country": "JP"
+  },
+  {
+    "id": "SHI",
+    "name": "下地島",
+    "latitude": 24.8251632,
+    "longitude": 125.151195,
+    "country": "JP"
+  },
+  {
+    "id": "TRA",
+    "name": "多良間",
+    "latitude": 24.6538026,
+    "longitude": 124.6735576,
+    "country": "JP"
+  },
+  {
+    "id": "ISG",
+    "name": "石垣",
+    "latitude": 24.3969747,
+    "longitude": 124.2441216,
+    "country": "JP"
+  },
+  {
+    "id": "OGN",
+    "name": "与那国",
+    "latitude": 24.4659435,
+    "longitude": 122.977573,
+    "country": "JP"
+  },
+  {
+    "id": "TPE",
+    "name": "台北桃園",
+    "latitude": 25.0777,
+    "longitude": 121.233002,
+    "country": "TW"
+  },
+  {
+    "id": "TSA",
+    "name": "台北松山",
+    "latitude": 25.067244,
+    "longitude": 121.552822,
+    "country": "TW"
+  },
+  {
+    "id": "RMQ",
+    "name": "台中",
+    "latitude": 24.2647,
+    "longitude": 120.621002,
+    "country": "TW"
+  },
+  {
+    "id": "TNN",
+    "name": "台南",
+    "latitude": 22.950399,
+    "longitude": 120.206001,
+    "country": "TW"
+  },
+  {
+    "id": "CYI",
+    "name": "嘉義",
+    "latitude": 23.462577,
+    "longitude": 120.390544,
+    "country": "TW"
+  },
+  {
+    "id": "KHH",
+    "name": "高雄",
+    "latitude": 22.577101,
+    "longitude": 120.349998,
+    "country": "TW"
+  },
+  {
+    "id": "HUN",
+    "name": "花蓮",
+    "latitude": 24.023163,
+    "longitude": 121.617991,
+    "country": "TW"
+  },
+  {
+    "id": "TTT",
+    "name": "台東",
+    "latitude": 22.754856,
+    "longitude": 121.101794,
+    "country": "TW"
+  },
+  {
+    "id": "KYD",
+    "name": "蘭嶼",
+    "latitude": 22.027,
+    "longitude": 121.535003,
+    "country": "TW"
+  },
+  {
+    "id": "MZG",
+    "name": "澎湖",
+    "latitude": 23.568701,
+    "longitude": 119.627998,
+    "country": "TW"
+  },
+  {
+    "id": "KNH",
+    "name": "金門",
+    "latitude": 24.4279,
+    "longitude": 118.359001,
+    "country": "TW"
+  },
+  {
+    "id": "LZN",
+    "name": "南竿",
+    "latitude": 26.159656,
+    "longitude": 119.958376,
+    "country": "TW"
+  },
+  {
+    "id": "MFK",
+    "name": "北竿",
+    "latitude": 26.22414,
+    "longitude": 120.002679,
+    "country": "TW"
+  },
+  {
+    "id": "AUH",
+    "name": "Zayed",
+    "latitude": 24.440966,
+    "longitude": 54.649237,
+    "country": "AE"
+  },
+  {
+    "id": "DWC",
+    "name": "Al Maktoum",
+    "latitude": 24.896171,
+    "longitude": 55.16235,
+    "country": "AE"
+  },
+  {
+    "id": "DXB",
+    "name": "Dubai",
+    "latitude": 25.24979,
+    "longitude": 55.370992,
+    "country": "AE"
+  },
+  {
+    "id": "SHJ",
+    "name": "Sharjah",
+    "latitude": 25.3286,
+    "longitude": 55.5172,
+    "country": "AE"
+  },
+  {
+    "id": "KBL",
+    "name": "Kabul",
+    "latitude": 34.565899,
+    "longitude": 69.212303,
+    "country": "AF"
+  },
+  {
+    "id": "TIA",
+    "name": "Tirana",
+    "latitude": 41.4147,
+    "longitude": 19.7206,
+    "country": "AL"
+  },
+  {
+    "id": "EVN",
+    "name": "Zvartnots",
+    "latitude": 40.148941,
+    "longitude": 44.397887,
+    "country": "AM"
+  },
+  {
+    "id": "NBJ",
+    "name": "Luanda",
+    "latitude": -9.050734,
+    "longitude": 13.499078,
+    "country": "AO"
+  },
+  {
+    "id": "AEP",
+    "name": "Aeroparque",
+    "latitude": -34.559419,
+    "longitude": -58.415536,
+    "country": "AR"
+  },
+  {
+    "id": "COR",
+    "name": "Córdoba",
+    "latitude": -31.312346,
+    "longitude": -64.208329,
+    "country": "AR"
+  },
+  {
+    "id": "EZE",
+    "name": "Ezeiza",
+    "latitude": -34.8222,
+    "longitude": -58.5358,
+    "country": "AR"
+  },
+  {
+    "id": "MDZ",
+    "name": "Mendoza",
+    "latitude": -32.831699,
+    "longitude": -68.7929,
+    "country": "AR"
+  },
+  {
+    "id": "SZG",
+    "name": "Salzburg",
+    "latitude": 47.793301,
+    "longitude": 13.0043,
+    "country": "AT"
+  },
+  {
+    "id": "VIE",
+    "name": "Vienna",
+    "latitude": 48.110298,
+    "longitude": 16.5697,
+    "country": "AT"
+  },
+  {
+    "id": "ADL",
+    "name": "Adelaide",
+    "latitude": -34.947512,
+    "longitude": 138.533393,
+    "country": "AU"
+  },
+  {
+    "id": "BNE",
+    "name": "Brisbane",
+    "latitude": -27.384199,
+    "longitude": 153.117004,
+    "country": "AU"
+  },
+  {
+    "id": "CNS",
+    "name": "Cairns",
+    "latitude": -16.878921,
+    "longitude": 145.74948,
+    "country": "AU"
+  },
+  {
+    "id": "DRW",
+    "name": "Darwin",
+    "latitude": -12.41497,
+    "longitude": 130.88185,
+    "country": "AU"
+  },
+  {
+    "id": "HBA",
+    "name": "Hobart",
+    "latitude": -42.837032,
+    "longitude": 147.513022,
+    "country": "AU"
+  },
+  {
+    "id": "MEL",
+    "name": "Melbourne",
+    "latitude": -37.670732,
+    "longitude": 144.837898,
+    "country": "AU"
+  },
+  {
+    "id": "PER",
+    "name": "Perth",
+    "latitude": -31.9403,
+    "longitude": 115.967003,
+    "country": "AU"
+  },
+  {
+    "id": "SYD",
+    "name": "Sydney",
+    "latitude": -33.946098,
+    "longitude": 151.177002,
+    "country": "AU"
+  },
+  {
+    "id": "GYD",
+    "name": "Baku",
+    "latitude": 40.47278,
+    "longitude": 50.050931,
+    "country": "AZ"
+  },
+  {
+    "id": "SJJ",
+    "name": "Sarajevo",
+    "latitude": 43.8246,
+    "longitude": 18.331499,
+    "country": "BA"
+  },
+  {
+    "id": "CGP",
+    "name": "Chattogram",
+    "latitude": 22.249599,
+    "longitude": 91.813301,
+    "country": "BD"
+  },
+  {
+    "id": "DAC",
+    "name": "Dhaka",
+    "latitude": 23.843347,
+    "longitude": 90.397783,
+    "country": "BD"
+  },
+  {
+    "id": "ZYL",
+    "name": "Sylhet",
+    "latitude": 24.963993,
+    "longitude": 91.864749,
+    "country": "BD"
+  },
+  {
+    "id": "BRU",
+    "name": "Brussels",
+    "latitude": 50.901402,
+    "longitude": 4.48444,
+    "country": "BE"
+  },
+  {
+    "id": "CRL",
+    "name": "Charleroi",
+    "latitude": 50.461963,
+    "longitude": 4.459562,
+    "country": "BE"
+  },
+  {
+    "id": "OUA",
+    "name": "Ouagadougou",
+    "latitude": 12.3532,
+    "longitude": -1.51242,
+    "country": "BF"
+  },
+  {
+    "id": "SOF",
+    "name": "Sofia",
+    "latitude": 42.696357,
+    "longitude": 23.417671,
+    "country": "BG"
+  },
+  {
+    "id": "VAR",
+    "name": "Varna",
+    "latitude": 43.232101,
+    "longitude": 27.8251,
+    "country": "BG"
+  },
+  {
+    "id": "BAH",
+    "name": "Bahrain",
+    "latitude": 26.267295,
+    "longitude": 50.63764,
+    "country": "BH"
+  },
+  {
+    "id": "BJM",
+    "name": "Bujumbura",
+    "latitude": -3.32402,
+    "longitude": 29.318501,
+    "country": "BI"
+  },
+  {
+    "id": "COO",
+    "name": "Cotonou",
+    "latitude": 6.35723,
+    "longitude": 2.38435,
+    "country": "BJ"
+  },
+  {
+    "id": "BWN",
+    "name": "Brunei",
+    "latitude": 4.9442,
+    "longitude": 114.928001,
+    "country": "BN"
+  },
+  {
+    "id": "LPB",
+    "name": "La Paz",
+    "latitude": -16.510272,
+    "longitude": -68.189416,
+    "country": "BO"
+  },
+  {
+    "id": "BEL",
+    "name": "Belém",
+    "latitude": -1.379279,
+    "longitude": -48.476207,
+    "country": "BR"
+  },
+  {
+    "id": "BSB",
+    "name": "Brasília",
+    "latitude": -15.869167,
+    "longitude": -47.920834,
+    "country": "BR"
+  },
+  {
+    "id": "CGH",
+    "name": "São Paulo/Congonhas",
+    "latitude": -23.627657,
+    "longitude": -46.654601,
+    "country": "BR"
+  },
+  {
+    "id": "CNF",
+    "name": "Belo Horizonte",
+    "latitude": -19.63571,
+    "longitude": -43.966928,
+    "country": "BR"
+  },
+  {
+    "id": "FLN",
+    "name": "Florianópolis",
+    "latitude": -27.670279,
+    "longitude": -48.552502,
+    "country": "BR"
+  },
+  {
+    "id": "FOR",
+    "name": "Fortaleza",
+    "latitude": -3.775833,
+    "longitude": -38.532222,
+    "country": "BR"
+  },
+  {
+    "id": "GIG",
+    "name": "Rio de Janeiro/Galeão",
+    "latitude": -22.809999,
+    "longitude": -43.250557,
+    "country": "BR"
+  },
+  {
+    "id": "GRU",
+    "name": "São Paulo/Guarulhos",
+    "latitude": -23.431274,
+    "longitude": -46.469954,
+    "country": "BR"
+  },
+  {
+    "id": "MAO",
+    "name": "Manaus",
+    "latitude": -3.03861,
+    "longitude": -60.049702,
+    "country": "BR"
+  },
+  {
+    "id": "POA",
+    "name": "Porto Alegre",
+    "latitude": -29.993984,
+    "longitude": -51.167482,
+    "country": "BR"
+  },
+  {
+    "id": "REC",
+    "name": "Recife",
+    "latitude": -8.12747,
+    "longitude": -34.922961,
+    "country": "BR"
+  },
+  {
+    "id": "SSA",
+    "name": "Salvador Bahia",
+    "latitude": -12.908611,
+    "longitude": -38.322498,
+    "country": "BR"
+  },
+  {
+    "id": "NAS",
+    "name": "Nassau",
+    "latitude": 25.039,
+    "longitude": -77.466202,
+    "country": "BS"
+  },
+  {
+    "id": "GBE",
+    "name": "Gaborone",
+    "latitude": -24.555201,
+    "longitude": 25.9182,
+    "country": "BW"
+  },
+  {
+    "id": "BZE",
+    "name": "Belize",
+    "latitude": 17.539951,
+    "longitude": -88.303556,
+    "country": "BZ"
+  },
+  {
+    "id": "YEG",
+    "name": "Edmonton",
+    "latitude": 53.3097,
+    "longitude": -113.580002,
+    "country": "CA"
+  },
+  {
+    "id": "YOW",
+    "name": "Ottawa",
+    "latitude": 45.322498,
+    "longitude": -75.669197,
+    "country": "CA"
+  },
+  {
+    "id": "YUL",
+    "name": "Montreal",
+    "latitude": 45.467837,
+    "longitude": -73.742294,
+    "country": "CA"
+  },
+  {
+    "id": "YVR",
+    "name": "Vancouver",
+    "latitude": 49.193901,
+    "longitude": -123.183998,
+    "country": "CA"
+  },
+  {
+    "id": "YWG",
+    "name": "Winnipeg",
+    "latitude": 49.91,
+    "longitude": -97.239899,
+    "country": "CA"
+  },
+  {
+    "id": "YYC",
+    "name": "Calgary",
+    "latitude": 51.118822,
+    "longitude": -114.009933,
+    "country": "CA"
+  },
+  {
+    "id": "YYZ",
+    "name": "Toronto",
+    "latitude": 43.675935,
+    "longitude": -79.629421,
+    "country": "CA"
+  },
+  {
+    "id": "FIH",
+    "name": "Kinshasa",
+    "latitude": -4.38575,
+    "longitude": 15.4446,
+    "country": "CD"
+  },
+  {
+    "id": "BZV",
+    "name": "Brazzaville",
+    "latitude": -4.2517,
+    "longitude": 15.253,
+    "country": "CG"
+  },
+  {
+    "id": "GVA",
+    "name": "Geneva",
+    "latitude": 46.238098,
+    "longitude": 6.10895,
+    "country": "CH"
+  },
+  {
+    "id": "ZRH",
+    "name": "Zürich",
+    "latitude": 47.458056,
+    "longitude": 8.548056,
+    "country": "CH"
+  },
+  {
+    "id": "ABJ",
+    "name": "Abidjan",
+    "latitude": 5.26139,
+    "longitude": -3.92629,
+    "country": "CI"
+  },
+  {
+    "id": "IPC",
+    "name": "Isla de Pascua",
+    "latitude": -27.165411,
+    "longitude": -109.421027,
+    "country": "CL"
+  },
+  {
+    "id": "SCL",
+    "name": "Santiago",
+    "latitude": -33.393002,
+    "longitude": -70.785797,
+    "country": "CL"
+  },
+  {
+    "id": "DLA",
+    "name": "Douala",
+    "latitude": 4.00608,
+    "longitude": 9.71948,
+    "country": "CM"
+  },
+  {
+    "id": "NSI",
+    "name": "Yaoundé Nsimalen",
+    "latitude": 3.72256,
+    "longitude": 11.5533,
+    "country": "CM"
+  },
+  {
+    "id": "BOG",
+    "name": "Bogotá",
+    "latitude": 4.70159,
+    "longitude": -74.1469,
+    "country": "CO"
+  },
+  {
+    "id": "CTG",
+    "name": "Cartagena",
+    "latitude": 10.4424,
+    "longitude": -75.513,
+    "country": "CO"
+  },
+  {
+    "id": "MDE",
+    "name": "Medellín",
+    "latitude": 6.16454,
+    "longitude": -75.4231,
+    "country": "CO"
+  },
+  {
+    "id": "SJO",
+    "name": "San José",
+    "latitude": 9.99386,
+    "longitude": -84.208801,
+    "country": "CR"
+  },
+  {
+    "id": "HAV",
+    "name": "Havana",
+    "latitude": 22.989201,
+    "longitude": -82.409103,
+    "country": "CU"
+  },
+  {
+    "id": "LCA",
+    "name": "Larnaca",
+    "latitude": 34.875099,
+    "longitude": 33.624901,
+    "country": "CY"
+  },
+  {
+    "id": "PFO",
+    "name": "Paphos",
+    "latitude": 34.717999,
+    "longitude": 32.485699,
+    "country": "CY"
+  },
+  {
+    "id": "BRQ",
+    "name": "Brno",
+    "latitude": 49.151276,
+    "longitude": 16.693972,
+    "country": "CZ"
+  },
+  {
+    "id": "PRG",
+    "name": "Prague",
+    "latitude": 50.100874,
+    "longitude": 14.259911,
+    "country": "CZ"
+  },
+  {
+    "id": "BER",
+    "name": "Berlin",
+    "latitude": 52.361738,
+    "longitude": 13.502341,
+    "country": "DE"
+  },
+  {
+    "id": "CGN",
+    "name": "Cologne",
+    "latitude": 50.865898,
+    "longitude": 7.14274,
+    "country": "DE"
+  },
+  {
+    "id": "DUS",
+    "name": "Düsseldorf",
+    "latitude": 51.289501,
+    "longitude": 6.76678,
+    "country": "DE"
+  },
+  {
+    "id": "FRA",
+    "name": "Frankfurt",
+    "latitude": 50.026706,
+    "longitude": 8.55835,
+    "country": "DE"
+  },
+  {
+    "id": "HAM",
+    "name": "Hamburg",
+    "latitude": 53.630402,
+    "longitude": 9.98823,
+    "country": "DE"
+  },
+  {
+    "id": "MUC",
+    "name": "Munich",
+    "latitude": 48.353802,
+    "longitude": 11.7861,
+    "country": "DE"
+  },
+  {
+    "id": "BLL",
+    "name": "Billund",
+    "latitude": 55.740335,
+    "longitude": 9.157019,
+    "country": "DK"
+  },
+  {
+    "id": "CPH",
+    "name": "Copenhagen",
+    "latitude": 55.617901,
+    "longitude": 12.656,
+    "country": "DK"
+  },
+  {
+    "id": "PUJ",
+    "name": "Punta Cana",
+    "latitude": 18.567093,
+    "longitude": -68.364558,
+    "country": "DO"
+  },
+  {
+    "id": "SDQ",
+    "name": "Santo Domingo",
+    "latitude": 18.429701,
+    "longitude": -69.6689,
+    "country": "DO"
+  },
+  {
+    "id": "ALG",
+    "name": "Algiers",
+    "latitude": 36.693886,
+    "longitude": 3.214531,
+    "country": "DZ"
+  },
+  {
+    "id": "ORN",
+    "name": "Oran",
+    "latitude": 35.620648,
+    "longitude": -0.622486,
+    "country": "DZ"
+  },
+  {
+    "id": "GYE",
+    "name": "Guayaquil",
+    "latitude": -2.15742,
+    "longitude": -79.883598,
+    "country": "EC"
+  },
+  {
+    "id": "UIO",
+    "name": "Quito",
+    "latitude": -0.125399,
+    "longitude": -78.354306,
+    "country": "EC"
+  },
+  {
+    "id": "TLL",
+    "name": "Tallinn",
+    "latitude": 59.413246,
+    "longitude": 24.83264,
+    "country": "EE"
+  },
+  {
+    "id": "CAI",
+    "name": "Cairo",
+    "latitude": 30.111534,
+    "longitude": 31.396694,
+    "country": "EG"
+  },
+  {
+    "id": "HRG",
+    "name": "Hurghada",
+    "latitude": 27.176776,
+    "longitude": 33.796692,
+    "country": "EG"
+  },
+  {
+    "id": "SSH",
+    "name": "Sharm El Sheikh",
+    "latitude": 27.977272,
+    "longitude": 34.394717,
+    "country": "EG"
+  },
+  {
+    "id": "AGP",
+    "name": "Málaga",
+    "latitude": 36.6749,
+    "longitude": -4.49911,
+    "country": "ES"
+  },
+  {
+    "id": "BCN",
+    "name": "Barcelona",
+    "latitude": 41.2971,
+    "longitude": 2.07846,
+    "country": "ES"
+  },
+  {
+    "id": "MAD",
+    "name": "Madrid",
+    "latitude": 40.493407,
+    "longitude": -3.572249,
+    "country": "ES"
+  },
+  {
+    "id": "PMI",
+    "name": "Palma de Mallorca",
+    "latitude": 39.551701,
+    "longitude": 2.73881,
+    "country": "ES"
+  },
+  {
+    "id": "SVQ",
+    "name": "Seville",
+    "latitude": 37.417999,
+    "longitude": -5.89311,
+    "country": "ES"
+  },
+  {
+    "id": "VLC",
+    "name": "Valencia",
+    "latitude": 39.489162,
+    "longitude": -0.480961,
+    "country": "ES"
+  },
+  {
+    "id": "ADD",
+    "name": "Addis Ababa",
+    "latitude": 8.97789,
+    "longitude": 38.799301,
+    "country": "ET"
+  },
+  {
+    "id": "HEL",
+    "name": "Helsinki",
+    "latitude": 60.318363,
+    "longitude": 24.963341,
+    "country": "FI"
+  },
+  {
+    "id": "NAN",
+    "name": "Nadi",
+    "latitude": -17.761822,
+    "longitude": 177.437843,
+    "country": "FJ"
+  },
+  {
+    "id": "SUV",
+    "name": "Nausori",
+    "latitude": -18.044226,
+    "longitude": 178.561486,
+    "country": "FJ"
+  },
+  {
+    "id": "BSL",
+    "name": "Basel-Mulhouse",
+    "latitude": 47.60068,
+    "longitude": 7.521117,
+    "country": "FR"
+  },
+  {
+    "id": "CDG",
+    "name": "Paris Charles de Gaulle",
+    "latitude": 49.00896,
+    "longitude": 2.554117,
+    "country": "FR"
+  },
+  {
+    "id": "LYS",
+    "name": "Lyon",
+    "latitude": 45.725996,
+    "longitude": 5.090139,
+    "country": "FR"
+  },
+  {
+    "id": "MRS",
+    "name": "Marseille",
+    "latitude": 43.438088,
+    "longitude": 5.2125,
+    "country": "FR"
+  },
+  {
+    "id": "NCE",
+    "name": "Nice",
+    "latitude": 43.658401,
+    "longitude": 7.21587,
+    "country": "FR"
+  },
+  {
+    "id": "ORY",
+    "name": "Paris Orly",
+    "latitude": 48.729499,
+    "longitude": 2.358963,
+    "country": "FR"
+  },
+  {
+    "id": "TLS",
+    "name": "Toulouse",
+    "latitude": 43.629101,
+    "longitude": 1.36382,
+    "country": "FR"
+  },
+  {
+    "id": "LBV",
+    "name": "Libreville",
+    "latitude": 0.458951,
+    "longitude": 9.41214,
+    "country": "GA"
+  },
+  {
+    "id": "BFS",
+    "name": "Belfast",
+    "latitude": 54.657501,
+    "longitude": -6.21583,
+    "country": "GB"
+  },
+  {
+    "id": "EDI",
+    "name": "Edinburgh",
+    "latitude": 55.950145,
+    "longitude": -3.372288,
+    "country": "GB"
+  },
+  {
+    "id": "LGW",
+    "name": "London Gatwick",
+    "latitude": 51.148744,
+    "longitude": -0.185739,
+    "country": "GB"
+  },
+  {
+    "id": "LHR",
+    "name": "London Heathrow",
+    "latitude": 51.470748,
+    "longitude": -0.459909,
+    "country": "GB"
+  },
+  {
+    "id": "MAN",
+    "name": "Manchester",
+    "latitude": 53.349375,
+    "longitude": -2.279521,
+    "country": "GB"
+  },
+  {
+    "id": "KUT",
+    "name": "Kutaisi",
+    "latitude": 42.177448,
+    "longitude": 42.485353,
+    "country": "GE"
+  },
+  {
+    "id": "TBS",
+    "name": "Tbilisi",
+    "latitude": 41.669201,
+    "longitude": 44.9547,
+    "country": "GE"
+  },
+  {
+    "id": "CAY",
+    "name": "Cayenne",
+    "latitude": 4.819964,
+    "longitude": -52.361326,
+    "country": "GF"
+  },
+  {
+    "id": "ACI",
+    "name": "Alderney",
+    "latitude": 49.706104,
+    "longitude": -2.21472,
+    "country": "GG"
+  },
+  {
+    "id": "GCI",
+    "name": "Guernsey",
+    "latitude": 49.435001,
+    "longitude": -2.60197,
+    "country": "GG"
+  },
+  {
+    "id": "ACC",
+    "name": "Accra",
+    "latitude": 5.60519,
+    "longitude": -0.166786,
+    "country": "GH"
+  },
+  {
+    "id": "BJL",
+    "name": "Banjul",
+    "latitude": 13.338,
+    "longitude": -16.652201,
+    "country": "GM"
+  },
+  {
+    "id": "CKY",
+    "name": "Conakry",
+    "latitude": 9.57689,
+    "longitude": -13.612,
+    "country": "GN"
+  },
+  {
+    "id": "ATH",
+    "name": "Athens",
+    "latitude": 37.936401,
+    "longitude": 23.9445,
+    "country": "GR"
+  },
+  {
+    "id": "HER",
+    "name": "Heraklion",
+    "latitude": 35.339699,
+    "longitude": 25.1803,
+    "country": "GR"
+  },
+  {
+    "id": "SKG",
+    "name": "Thessaloniki",
+    "latitude": 40.51928,
+    "longitude": 22.970009,
+    "country": "GR"
+  },
+  {
+    "id": "GUA",
+    "name": "Guatemala City",
+    "latitude": 14.582896,
+    "longitude": -90.527515,
+    "country": "GT"
+  },
+  {
+    "id": "GUM",
+    "name": "Guam",
+    "latitude": 13.485,
+    "longitude": 144.797282,
+    "country": "GU"
+  },
+  {
+    "id": "GEO",
+    "name": "Georgetown",
+    "latitude": 6.49855,
+    "longitude": -58.254101,
+    "country": "GY"
+  },
+  {
+    "id": "SAP",
+    "name": "San Pedro Sula",
+    "latitude": 15.4526,
+    "longitude": -87.923599,
+    "country": "HN"
+  },
+  {
+    "id": "ZAG",
+    "name": "Zagreb",
+    "latitude": 45.742901,
+    "longitude": 16.0688,
+    "country": "HR"
+  },
+  {
+    "id": "PAP",
+    "name": "Port-au-Prince",
+    "latitude": 18.580023,
+    "longitude": -72.292596,
+    "country": "HT"
+  },
+  {
+    "id": "BUD",
+    "name": "Budapest",
+    "latitude": 47.43018,
+    "longitude": 19.262393,
+    "country": "HU"
+  },
+  {
+    "id": "DEB",
+    "name": "Debrecen",
+    "latitude": 47.489469,
+    "longitude": 21.616278,
+    "country": "HU"
+  },
+  {
+    "id": "CGK",
+    "name": "Jakarta",
+    "latitude": -6.12557,
+    "longitude": 106.655998,
+    "country": "ID"
+  },
+  {
+    "id": "DUB",
+    "name": "Dublin",
+    "latitude": 53.428713,
+    "longitude": -6.262121,
+    "country": "IE"
+  },
+  {
+    "id": "ORK",
+    "name": "Cork",
+    "latitude": 51.841301,
+    "longitude": -8.49111,
+    "country": "IE"
+  },
+  {
+    "id": "SNN",
+    "name": "Shannon",
+    "latitude": 52.702,
+    "longitude": -8.92482,
+    "country": "IE"
+  },
+  {
+    "id": "TLV",
+    "name": "Tel Aviv",
+    "latitude": 32.011398,
+    "longitude": 34.8867,
+    "country": "IL"
+  },
+  {
+    "id": "AMD",
+    "name": "Ahmedabad",
+    "latitude": 23.0772,
+    "longitude": 72.634697,
+    "country": "IN"
+  },
+  {
+    "id": "BLR",
+    "name": "Bengaluru",
+    "latitude": 13.1979,
+    "longitude": 77.706299,
+    "country": "IN"
+  },
+  {
+    "id": "BOM",
+    "name": "Mumbai",
+    "latitude": 19.088699,
+    "longitude": 72.867897,
+    "country": "IN"
+  },
+  {
+    "id": "CCU",
+    "name": "Kolkata",
+    "latitude": 22.654012,
+    "longitude": 88.44765,
+    "country": "IN"
+  },
+  {
+    "id": "COK",
+    "name": "Cochin",
+    "latitude": 10.151047,
+    "longitude": 76.400838,
+    "country": "IN"
+  },
+  {
+    "id": "DEL",
+    "name": "New Delhi",
+    "latitude": 28.55563,
+    "longitude": 77.09519,
+    "country": "IN"
+  },
+  {
+    "id": "GOI",
+    "name": "Goa",
+    "latitude": 15.380062,
+    "longitude": 73.833328,
+    "country": "IN"
+  },
+  {
+    "id": "HYD",
+    "name": "Hyderabad",
+    "latitude": 17.231318,
+    "longitude": 78.429855,
+    "country": "IN"
+  },
+  {
+    "id": "MAA",
+    "name": "Chennai",
+    "latitude": 12.990005,
+    "longitude": 80.169296,
+    "country": "IN"
+  },
+  {
+    "id": "TRV",
+    "name": "Thiruvananthapuram",
+    "latitude": 8.481889,
+    "longitude": 76.920029,
+    "country": "IN"
+  },
+  {
+    "id": "BGW",
+    "name": "Baghdad",
+    "latitude": 33.262501,
+    "longitude": 44.2346,
+    "country": "IQ"
+  },
+  {
+    "id": "EBL",
+    "name": "Erbil",
+    "latitude": 36.236047,
+    "longitude": 43.946615,
+    "country": "IQ"
+  },
+  {
+    "id": "IKA",
+    "name": "Tehran Imam Khomeini",
+    "latitude": 35.4161,
+    "longitude": 51.152199,
+    "country": "IR"
+  },
+  {
+    "id": "MHD",
+    "name": "Mashhad",
+    "latitude": 36.234821,
+    "longitude": 59.642949,
+    "country": "IR"
+  },
+  {
+    "id": "THR",
+    "name": "Tehran Mehrabad",
+    "latitude": 35.689175,
+    "longitude": 51.314392,
+    "country": "IR"
+  },
+  {
+    "id": "KEF",
+    "name": "Keflavik",
+    "latitude": 63.985001,
+    "longitude": -22.6056,
+    "country": "IS"
+  },
+  {
+    "id": "RKV",
+    "name": "Reykjavík",
+    "latitude": 64.128732,
+    "longitude": -21.93759,
+    "country": "IS"
+  },
+  {
+    "id": "BLQ",
+    "name": "Bologna",
+    "latitude": 44.5354,
+    "longitude": 11.2887,
+    "country": "IT"
+  },
+  {
+    "id": "CAG",
+    "name": "Cagliari",
+    "latitude": 39.251499,
+    "longitude": 9.05428,
+    "country": "IT"
+  },
+  {
+    "id": "FCO",
+    "name": "Rome Fiumicino",
+    "latitude": 41.804532,
+    "longitude": 12.251998,
+    "country": "IT"
+  },
+  {
+    "id": "LIN",
+    "name": "Milan Linate",
+    "latitude": 45.445099,
+    "longitude": 9.27674,
+    "country": "IT"
+  },
+  {
+    "id": "MXP",
+    "name": "Milan Malpensa",
+    "latitude": 45.6306,
+    "longitude": 8.72811,
+    "country": "IT"
+  },
+  {
+    "id": "NAP",
+    "name": "Naples",
+    "latitude": 40.886002,
+    "longitude": 14.2908,
+    "country": "IT"
+  },
+  {
+    "id": "PMO",
+    "name": "Palermo",
+    "latitude": 38.175999,
+    "longitude": 13.091,
+    "country": "IT"
+  },
+  {
+    "id": "VCE",
+    "name": "Venice",
+    "latitude": 45.505299,
+    "longitude": 12.3519,
+    "country": "IT"
+  },
+  {
+    "id": "JER",
+    "name": "Jersey",
+    "latitude": 49.207901,
+    "longitude": -2.19551,
+    "country": "JE"
+  },
+  {
+    "id": "MBJ",
+    "name": "Montego Bay",
+    "latitude": 18.50342,
+    "longitude": -77.91323,
+    "country": "JM"
+  },
+  {
+    "id": "AMM",
+    "name": "Amman",
+    "latitude": 31.722601,
+    "longitude": 35.993198,
+    "country": "JO"
+  },
+  {
+    "id": "AQJ",
+    "name": "Aqaba",
+    "latitude": 29.611601,
+    "longitude": 35.018101,
+    "country": "JO"
+  },
+  {
+    "id": "MBA",
+    "name": "Mombasa",
+    "latitude": -4.03483,
+    "longitude": 39.5942,
+    "country": "KE"
+  },
+  {
+    "id": "NBO",
+    "name": "Nairobi",
+    "latitude": -1.318886,
+    "longitude": 36.928233,
+    "country": "KE"
+  },
+  {
+    "id": "HAH",
+    "name": "Moroni",
+    "latitude": -11.5337,
+    "longitude": 43.2719,
+    "country": "KM"
+  },
+  {
+    "id": "CJU",
+    "name": "Jeju",
+    "latitude": 33.512058,
+    "longitude": 126.492548,
+    "country": "KR"
+  },
+  {
+    "id": "GMP",
+    "name": "首爾金浦",
+    "latitude": 37.5583,
+    "longitude": 126.791,
+    "country": "KR"
+  },
+  {
+    "id": "ICN",
+    "name": "首爾仁川",
+    "latitude": 37.469101,
+    "longitude": 126.450996,
+    "country": "KR"
+  },
+  {
+    "id": "PUS",
+    "name": "釜山",
+    "latitude": 35.179501,
+    "longitude": 128.938004,
+    "country": "KR"
+  },
+  {
+    "id": "KWI",
+    "name": "Kuwait",
+    "latitude": 29.224487,
+    "longitude": 47.969813,
+    "country": "KW"
+  },
+  {
+    "id": "ALA",
+    "name": "Almaty",
+    "latitude": 43.354267,
+    "longitude": 77.042828,
+    "country": "KZ"
+  },
+  {
+    "id": "NQZ",
+    "name": "Astana",
+    "latitude": 51.027035,
+    "longitude": 71.467094,
+    "country": "KZ"
+  },
+  {
+    "id": "LPQ",
+    "name": "Luang Phabang",
+    "latitude": 19.904273,
+    "longitude": 102.167191,
+    "country": "LA"
+  },
+  {
+    "id": "VTE",
+    "name": "Vientiane",
+    "latitude": 17.985052,
+    "longitude": 102.566692,
+    "country": "LA"
+  },
+  {
+    "id": "BEY",
+    "name": "Beirut",
+    "latitude": 33.819833,
+    "longitude": 35.487443,
+    "country": "LB"
+  },
+  {
+    "id": "CMB",
+    "name": "Colombo",
+    "latitude": 7.18076,
+    "longitude": 79.884102,
+    "country": "LK"
+  },
+  {
+    "id": "ROB",
+    "name": "Roberts",
+    "latitude": 6.23379,
+    "longitude": -10.3623,
+    "country": "LR"
+  },
+  {
+    "id": "MSU",
+    "name": "Maseru",
+    "latitude": -29.456277,
+    "longitude": 27.554456,
+    "country": "LS"
+  },
+  {
+    "id": "VNO",
+    "name": "Vilnius",
+    "latitude": 54.634102,
+    "longitude": 25.285801,
+    "country": "LT"
+  },
+  {
+    "id": "LUX",
+    "name": "Luxembourg",
+    "latitude": 49.626845,
+    "longitude": 6.212134,
+    "country": "LU"
+  },
+  {
+    "id": "RIX",
+    "name": "Riga",
+    "latitude": 56.920752,
+    "longitude": 23.970711,
+    "country": "LV"
+  },
+  {
+    "id": "AGA",
+    "name": "Agadir",
+    "latitude": 30.322478,
+    "longitude": -9.412003,
+    "country": "MA"
+  },
+  {
+    "id": "CMN",
+    "name": "Casablanca",
+    "latitude": 33.3675,
+    "longitude": -7.58997,
+    "country": "MA"
+  },
+  {
+    "id": "RAK",
+    "name": "Marrakesh",
+    "latitude": 31.604807,
+    "longitude": -8.035788,
+    "country": "MA"
+  },
+  {
+    "id": "TNR",
+    "name": "Antananarivo",
+    "latitude": -18.7969,
+    "longitude": 47.478802,
+    "country": "MG"
+  },
+  {
+    "id": "SKP",
+    "name": "Skopje",
+    "latitude": 41.958087,
+    "longitude": 21.622581,
+    "country": "MK"
+  },
+  {
+    "id": "MDL",
+    "name": "Mandalay",
+    "latitude": 21.7022,
+    "longitude": 95.977898,
+    "country": "MM"
+  },
+  {
+    "id": "RGN",
+    "name": "Yangon",
+    "latitude": 16.907301,
+    "longitude": 96.133202,
+    "country": "MM"
+  },
+  {
+    "id": "SPN",
+    "name": "Saipan",
+    "latitude": 15.119384,
+    "longitude": 145.728848,
+    "country": "MP"
+  },
+  {
+    "id": "MLA",
+    "name": "Malta",
+    "latitude": 35.845932,
+    "longitude": 14.491546,
+    "country": "MT"
+  },
+  {
+    "id": "MRU",
+    "name": "Mauritius",
+    "latitude": -20.430201,
+    "longitude": 57.683601,
+    "country": "MU"
+  },
+  {
+    "id": "MLE",
+    "name": "Malé",
+    "latitude": 4.19183,
+    "longitude": 73.529099,
+    "country": "MV"
+  },
+  {
+    "id": "LLW",
+    "name": "Lilongwe",
+    "latitude": -13.7894,
+    "longitude": 33.780998,
+    "country": "MW"
+  },
+  {
+    "id": "CUN",
+    "name": "Cancún",
+    "latitude": 21.040817,
+    "longitude": -86.87347,
+    "country": "MX"
+  },
+  {
+    "id": "GDL",
+    "name": "Guadalajara",
+    "latitude": 20.523342,
+    "longitude": -103.310108,
+    "country": "MX"
+  },
+  {
+    "id": "MEX",
+    "name": "Mexico City",
+    "latitude": 19.435822,
+    "longitude": -99.07033,
+    "country": "MX"
+  },
+  {
+    "id": "MTY",
+    "name": "Monterrey",
+    "latitude": 25.778521,
+    "longitude": -100.106989,
+    "country": "MX"
+  },
+  {
+    "id": "PVR",
+    "name": "Puerto Vallarta",
+    "latitude": 20.679913,
+    "longitude": -105.254391,
+    "country": "MX"
+  },
+  {
+    "id": "SJD",
+    "name": "Los Cabos",
+    "latitude": 23.151919,
+    "longitude": -109.720731,
+    "country": "MX"
+  },
+  {
+    "id": "TIJ",
+    "name": "Tijuana",
+    "latitude": 32.541043,
+    "longitude": -116.969976,
+    "country": "MX"
+  },
+  {
+    "id": "BKI",
+    "name": "亞庇",
+    "latitude": 5.932743,
+    "longitude": 116.049324,
+    "country": "MY"
+  },
+  {
+    "id": "JHB",
+    "name": "新山",
+    "latitude": 1.64131,
+    "longitude": 103.669998,
+    "country": "MY"
+  },
+  {
+    "id": "KUL",
+    "name": "吉隆坡",
+    "latitude": 2.74558,
+    "longitude": 101.709999,
+    "country": "MY"
+  },
+  {
+    "id": "PEN",
+    "name": "檳城",
+    "latitude": 5.296303,
+    "longitude": 100.276185,
+    "country": "MY"
+  },
+  {
+    "id": "SZB",
+    "name": "梳邦",
+    "latitude": 3.13058,
+    "longitude": 101.549004,
+    "country": "MY"
+  },
+  {
+    "id": "INH",
+    "name": "Inhambane",
+    "latitude": -23.8764,
+    "longitude": 35.408501,
+    "country": "MZ"
+  },
+  {
+    "id": "MPM",
+    "name": "Maputo",
+    "latitude": -25.920799,
+    "longitude": 32.572601,
+    "country": "MZ"
+  },
+  {
+    "id": "POL",
+    "name": "Pemba",
+    "latitude": -12.993302,
+    "longitude": 40.524867,
+    "country": "MZ"
+  },
+  {
+    "id": "WDH",
+    "name": "Windhoek",
+    "latitude": -22.4799,
+    "longitude": 17.4709,
+    "country": "NA"
+  },
+  {
+    "id": "NOU",
+    "name": "Nouméa",
+    "latitude": -22.014601,
+    "longitude": 166.212997,
+    "country": "NC"
+  },
+  {
+    "id": "ABV",
+    "name": "Abuja",
+    "latitude": 9.00679,
+    "longitude": 7.26317,
+    "country": "NG"
+  },
+  {
+    "id": "KAN",
+    "name": "Kano",
+    "latitude": 12.045613,
+    "longitude": 8.523566,
+    "country": "NG"
+  },
+  {
+    "id": "LOS",
+    "name": "Lagos",
+    "latitude": 6.57737,
+    "longitude": 3.32116,
+    "country": "NG"
+  },
+  {
+    "id": "MGA",
+    "name": "Managua",
+    "latitude": 12.1415,
+    "longitude": -86.168198,
+    "country": "NI"
+  },
+  {
+    "id": "AMS",
+    "name": "Amsterdam",
+    "latitude": 52.308601,
+    "longitude": 4.76389,
+    "country": "NL"
+  },
+  {
+    "id": "EIN",
+    "name": "Eindhoven",
+    "latitude": 51.4501,
+    "longitude": 5.37453,
+    "country": "NL"
+  },
+  {
+    "id": "BGO",
+    "name": "Bergen",
+    "latitude": 60.2934,
+    "longitude": 5.21814,
+    "country": "NO"
+  },
+  {
+    "id": "OSL",
+    "name": "Oslo",
+    "latitude": 60.193901,
+    "longitude": 11.1004,
+    "country": "NO"
+  },
+  {
+    "id": "KTM",
+    "name": "Kathmandu",
+    "latitude": 27.6966,
+    "longitude": 85.3591,
+    "country": "NP"
+  },
+  {
+    "id": "PKR",
+    "name": "Pokhara",
+    "latitude": 28.200621,
+    "longitude": 83.981203,
+    "country": "NP"
+  },
+  {
+    "id": "AKL",
+    "name": "Auckland",
+    "latitude": -37.01199,
+    "longitude": 174.786331,
+    "country": "NZ"
+  },
+  {
+    "id": "CHC",
+    "name": "Christchurch",
+    "latitude": -43.489029,
+    "longitude": 172.532065,
+    "country": "NZ"
+  },
+  {
+    "id": "WLG",
+    "name": "Wellington",
+    "latitude": -41.326839,
+    "longitude": 174.806862,
+    "country": "NZ"
+  },
+  {
+    "id": "MCT",
+    "name": "Muscat",
+    "latitude": 23.600218,
+    "longitude": 58.285268,
+    "country": "OM"
+  },
+  {
+    "id": "PTY",
+    "name": "Panama City",
+    "latitude": 9.07136,
+    "longitude": -79.383499,
+    "country": "PA"
+  },
+  {
+    "id": "CUZ",
+    "name": "Cuzco",
+    "latitude": -13.5357,
+    "longitude": -71.938797,
+    "country": "PE"
+  },
+  {
+    "id": "LIM",
+    "name": "Lima",
+    "latitude": -12.0219,
+    "longitude": -77.114305,
+    "country": "PE"
+  },
+  {
+    "id": "PPT",
+    "name": "Papeete",
+    "latitude": -17.553472,
+    "longitude": -149.606936,
+    "country": "PF"
+  },
+  {
+    "id": "POM",
+    "name": "Port Moresby",
+    "latitude": -9.44338,
+    "longitude": 147.220001,
+    "country": "PG"
+  },
+  {
+    "id": "CEB",
+    "name": "Cebu",
+    "latitude": 10.309261,
+    "longitude": 123.97974,
+    "country": "PH"
+  },
+  {
+    "id": "CRK",
+    "name": "安吉利斯",
+    "latitude": 15.186,
+    "longitude": 120.559998,
+    "country": "PH"
+  },
+  {
+    "id": "DVO",
+    "name": "Davao",
+    "latitude": 7.12552,
+    "longitude": 125.646004,
+    "country": "PH"
+  },
+  {
+    "id": "ILO",
+    "name": "Iloilo",
+    "latitude": 10.833017,
+    "longitude": 122.493358,
+    "country": "PH"
+  },
+  {
+    "id": "MNL",
+    "name": "馬尼拉",
+    "latitude": 14.5086,
+    "longitude": 121.019997,
+    "country": "PH"
+  },
+  {
+    "id": "ISB",
+    "name": "Islamabad",
+    "latitude": 33.549,
+    "longitude": 72.82566,
+    "country": "PK"
+  },
+  {
+    "id": "KHI",
+    "name": "Karachi",
+    "latitude": 24.9065,
+    "longitude": 67.160797,
+    "country": "PK"
+  },
+  {
+    "id": "LHE",
+    "name": "Lahore",
+    "latitude": 31.521601,
+    "longitude": 74.403603,
+    "country": "PK"
+  },
+  {
+    "id": "PEW",
+    "name": "Peshawar",
+    "latitude": 33.9939,
+    "longitude": 71.514603,
+    "country": "PK"
+  },
+  {
+    "id": "GDN",
+    "name": "Gdańsk",
+    "latitude": 54.377602,
+    "longitude": 18.4662,
+    "country": "PL"
+  },
+  {
+    "id": "KRK",
+    "name": "Kraków",
+    "latitude": 50.077702,
+    "longitude": 19.7848,
+    "country": "PL"
+  },
+  {
+    "id": "WAW",
+    "name": "Warsaw",
+    "latitude": 52.165699,
+    "longitude": 20.9671,
+    "country": "PL"
+  },
+  {
+    "id": "SJU",
+    "name": "San Juan",
+    "latitude": 18.4394,
+    "longitude": -66.001801,
+    "country": "PR"
+  },
+  {
+    "id": "FAO",
+    "name": "Faro",
+    "latitude": 37.015909,
+    "longitude": -7.970939,
+    "country": "PT"
+  },
+  {
+    "id": "LIS",
+    "name": "Lisbon",
+    "latitude": 38.7813,
+    "longitude": -9.13592,
+    "country": "PT"
+  },
+  {
+    "id": "OPO",
+    "name": "Porto",
+    "latitude": 41.2481,
+    "longitude": -8.68139,
+    "country": "PT"
+  },
+  {
+    "id": "ASU",
+    "name": "Asunción",
+    "latitude": -25.240156,
+    "longitude": -57.519227,
+    "country": "PY"
+  },
+  {
+    "id": "DOH",
+    "name": "Doha",
+    "latitude": 25.273056,
+    "longitude": 51.608056,
+    "country": "QA"
+  },
+  {
+    "id": "CLJ",
+    "name": "Cluj",
+    "latitude": 46.786042,
+    "longitude": 23.685733,
+    "country": "RO"
+  },
+  {
+    "id": "OTP",
+    "name": "Otopeni",
+    "latitude": 44.571792,
+    "longitude": 26.103285,
+    "country": "RO"
+  },
+  {
+    "id": "BEG",
+    "name": "Belgrade",
+    "latitude": 44.818401,
+    "longitude": 20.309099,
+    "country": "RS"
+  },
+  {
+    "id": "KGL",
+    "name": "Kigali",
+    "latitude": -1.96863,
+    "longitude": 30.1395,
+    "country": "RW"
+  },
+  {
+    "id": "DMM",
+    "name": "Dammam",
+    "latitude": 26.4691,
+    "longitude": 49.798209,
+    "country": "SA"
+  },
+  {
+    "id": "JED",
+    "name": "Jeddah",
+    "latitude": 21.680241,
+    "longitude": 39.157436,
+    "country": "SA"
+  },
+  {
+    "id": "MED",
+    "name": "Medina",
+    "latitude": 24.5534,
+    "longitude": 39.705101,
+    "country": "SA"
+  },
+  {
+    "id": "RUH",
+    "name": "Riyadh",
+    "latitude": 24.9576,
+    "longitude": 46.698799,
+    "country": "SA"
+  },
+  {
+    "id": "SEZ",
+    "name": "Seychelles",
+    "latitude": -4.67434,
+    "longitude": 55.521801,
+    "country": "SC"
+  },
+  {
+    "id": "KRT",
+    "name": "Khartoum",
+    "latitude": 15.5895,
+    "longitude": 32.5532,
+    "country": "SD"
+  },
+  {
+    "id": "ARN",
+    "name": "Stockholm Arlanda",
+    "latitude": 59.64849,
+    "longitude": 17.928829,
+    "country": "SE"
+  },
+  {
+    "id": "GOT",
+    "name": "Göteborg",
+    "latitude": 57.6628,
+    "longitude": 12.2798,
+    "country": "SE"
+  },
+  {
+    "id": "SIN",
+    "name": "新加坡",
+    "latitude": 1.35019,
+    "longitude": 103.994003,
+    "country": "SG"
+  },
+  {
+    "id": "LJU",
+    "name": "Ljubljana",
+    "latitude": 46.223701,
+    "longitude": 14.4576,
+    "country": "SI"
+  },
+  {
+    "id": "FNA",
+    "name": "自由城",
+    "latitude": 8.61644,
+    "longitude": -13.1955,
+    "country": "SL"
+  },
+  {
+    "id": "DSS",
+    "name": "達卡",
+    "latitude": 14.670878,
+    "longitude": -17.072829,
+    "country": "SN"
+  },
+  {
+    "id": "PBM",
+    "name": "Paramaribo",
+    "latitude": 5.45283,
+    "longitude": -55.187801,
+    "country": "SR"
+  },
+  {
+    "id": "JUB",
+    "name": "Juba",
+    "latitude": 4.87201,
+    "longitude": 31.601101,
+    "country": "SS"
+  },
+  {
+    "id": "SAL",
+    "name": "El Salvador",
+    "latitude": 13.44447,
+    "longitude": -89.055784,
+    "country": "SV"
+  },
+  {
+    "id": "DAM",
+    "name": "Damascus",
+    "latitude": 33.411499,
+    "longitude": 36.515598,
+    "country": "SY"
+  },
+  {
+    "id": "LFW",
+    "name": "Lomé",
+    "latitude": 6.16561,
+    "longitude": 1.25451,
+    "country": "TG"
+  },
+  {
+    "id": "BKK",
+    "name": "曼谷",
+    "latitude": 13.6811,
+    "longitude": 100.747002,
+    "country": "TH"
+  },
+  {
+    "id": "CNX",
+    "name": "清邁",
+    "latitude": 18.7668,
+    "longitude": 98.962601,
+    "country": "TH"
+  },
+  {
+    "id": "DMK",
+    "name": "廊曼",
+    "latitude": 13.9126,
+    "longitude": 100.607002,
+    "country": "TH"
+  },
+  {
+    "id": "HKT",
+    "name": "普吉",
+    "latitude": 8.113257,
+    "longitude": 98.3174,
+    "country": "TH"
+  },
+  {
+    "id": "KBV",
+    "name": "喀比",
+    "latitude": 8.095591,
+    "longitude": 98.988955,
+    "country": "TH"
+  },
+  {
+    "id": "UTP",
+    "name": "烏打拋",
+    "latitude": 12.6799,
+    "longitude": 101.004997,
+    "country": "TH"
+  },
+  {
+    "id": "DYU",
+    "name": "Dushanbe",
+    "latitude": 38.543746,
+    "longitude": 68.822977,
+    "country": "TJ"
+  },
+  {
+    "id": "ASB",
+    "name": "Ashgabat",
+    "latitude": 37.986801,
+    "longitude": 58.361,
+    "country": "TM"
+  },
+  {
+    "id": "TUN",
+    "name": "Tunis",
+    "latitude": 36.851002,
+    "longitude": 10.2272,
+    "country": "TN"
+  },
+  {
+    "id": "ADB",
+    "name": "İzmir",
+    "latitude": 38.2924,
+    "longitude": 27.157,
+    "country": "TR"
+  },
+  {
+    "id": "AYT",
+    "name": "Antalya",
+    "latitude": 36.898701,
+    "longitude": 30.800501,
+    "country": "TR"
+  },
+  {
+    "id": "ESB",
+    "name": "Esenboğa",
+    "latitude": 40.128101,
+    "longitude": 32.995098,
+    "country": "TR"
+  },
+  {
+    "id": "IST",
+    "name": "Istanbul",
+    "latitude": 41.274874,
+    "longitude": 28.732136,
+    "country": "TR"
+  },
+  {
+    "id": "SAW",
+    "name": "Istanbul Sabiha",
+    "latitude": 40.898602,
+    "longitude": 29.3092,
+    "country": "TR"
+  },
+  {
+    "id": "DAR",
+    "name": "Dar es Salaam",
+    "latitude": -6.873499,
+    "longitude": 39.207288,
+    "country": "TZ"
+  },
+  {
+    "id": "JRO",
+    "name": "吉力馬札羅",
+    "latitude": -3.427049,
+    "longitude": 37.07353,
+    "country": "TZ"
+  },
+  {
+    "id": "ZNZ",
+    "name": "尚吉巴",
+    "latitude": -6.22202,
+    "longitude": 39.224899,
+    "country": "TZ"
+  },
+  {
+    "id": "EBB",
+    "name": "Entebbe",
+    "latitude": 0.042386,
+    "longitude": 32.443501,
+    "country": "UG"
+  },
+  {
+    "id": "ATL",
+    "name": "亞特蘭大",
+    "latitude": 33.6367,
+    "longitude": -84.428101,
+    "country": "US"
+  },
+  {
+    "id": "BNA",
+    "name": "Nashville",
+    "latitude": 36.1245,
+    "longitude": -86.6782,
+    "country": "US"
+  },
+  {
+    "id": "BOS",
+    "name": "波士頓",
+    "latitude": 42.36197,
+    "longitude": -71.0079,
+    "country": "US"
+  },
+  {
+    "id": "CLT",
+    "name": "Charlotte",
+    "latitude": 35.214001,
+    "longitude": -80.9431,
+    "country": "US"
+  },
+  {
+    "id": "DCA",
+    "name": "華盛頓",
+    "latitude": 38.8521,
+    "longitude": -77.037697,
+    "country": "US"
+  },
+  {
+    "id": "DEN",
+    "name": "丹佛",
+    "latitude": 39.860027,
+    "longitude": -104.673792,
+    "country": "US"
+  },
+  {
+    "id": "DFW",
+    "name": "達拉斯",
+    "latitude": 32.896801,
+    "longitude": -97.038002,
+    "country": "US"
+  },
+  {
+    "id": "DTW",
+    "name": "底特律",
+    "latitude": 42.21377,
+    "longitude": -83.353786,
+    "country": "US"
+  },
+  {
+    "id": "EWR",
+    "name": "紐華克",
+    "latitude": 40.6894,
+    "longitude": -74.170545,
+    "country": "US"
+  },
+  {
+    "id": "IAH",
+    "name": "休士頓",
+    "latitude": 29.9844,
+    "longitude": -95.3414,
+    "country": "US"
+  },
+  {
+    "id": "JFK",
+    "name": "紐約",
+    "latitude": 40.639447,
+    "longitude": -73.779317,
+    "country": "US"
+  },
+  {
+    "id": "LAS",
+    "name": "拉斯維加斯",
+    "latitude": 36.083361,
+    "longitude": -115.151817,
+    "country": "US"
+  },
+  {
+    "id": "LAX",
+    "name": "洛杉磯",
+    "latitude": 33.942501,
+    "longitude": -118.407997,
+    "country": "US"
+  },
+  {
+    "id": "MCO",
+    "name": "奧蘭多",
+    "latitude": 28.429399,
+    "longitude": -81.308998,
+    "country": "US"
+  },
+  {
+    "id": "MIA",
+    "name": "邁阿密",
+    "latitude": 25.796011,
+    "longitude": -80.289751,
+    "country": "US"
+  },
+  {
+    "id": "MSP",
+    "name": "明尼亞波利斯",
+    "latitude": 44.880081,
+    "longitude": -93.221741,
+    "country": "US"
+  },
+  {
+    "id": "ORD",
+    "name": "芝加哥",
+    "latitude": 41.9786,
+    "longitude": -87.9048,
+    "country": "US"
+  },
+  {
+    "id": "PHL",
+    "name": "費城",
+    "latitude": 39.871899,
+    "longitude": -75.241096,
+    "country": "US"
+  },
+  {
+    "id": "PHX",
+    "name": "鳳凰城",
+    "latitude": 33.435302,
+    "longitude": -112.005905,
+    "country": "US"
+  },
+  {
+    "id": "SAN",
+    "name": "聖地牙哥",
+    "latitude": 32.733601,
+    "longitude": -117.190002,
+    "country": "US"
+  },
+  {
+    "id": "SEA",
+    "name": "西雅圖",
+    "latitude": 47.447943,
+    "longitude": -122.310276,
+    "country": "US"
+  },
+  {
+    "id": "SFO",
+    "name": "舊金山",
+    "latitude": 37.619806,
+    "longitude": -122.374821,
+    "country": "US"
+  },
+  {
+    "id": "SLC",
+    "name": "鹽湖城",
+    "latitude": 40.78886,
+    "longitude": -111.979866,
+    "country": "US"
+  },
+  {
+    "id": "TPA",
+    "name": "Tampa",
+    "latitude": 27.9755,
+    "longitude": -82.533203,
+    "country": "US"
+  },
+  {
+    "id": "MVD",
+    "name": "Montevideo",
+    "latitude": -34.835647,
+    "longitude": -56.026497,
+    "country": "UY"
+  },
+  {
+    "id": "SKD",
+    "name": "Samarkand",
+    "latitude": 39.701842,
+    "longitude": 66.981467,
+    "country": "UZ"
+  },
+  {
+    "id": "TAS",
+    "name": "Tashkent",
+    "latitude": 41.2579,
+    "longitude": 69.281197,
+    "country": "UZ"
+  },
+  {
+    "id": "CXR",
+    "name": "金蘭",
+    "latitude": 11.9982,
+    "longitude": 109.219002,
+    "country": "VN"
+  },
+  {
+    "id": "DAD",
+    "name": "峴港",
+    "latitude": 16.0439,
+    "longitude": 108.198997,
+    "country": "VN"
+  },
+  {
+    "id": "HAN",
+    "name": "河內",
+    "latitude": 21.221201,
+    "longitude": 105.806999,
+    "country": "VN"
+  },
+  {
+    "id": "SGN",
+    "name": "胡志明市",
+    "latitude": 10.8188,
+    "longitude": 106.652,
+    "country": "VN"
+  },
+  {
+    "id": "APW",
+    "name": "Apia",
+    "latitude": -13.83,
+    "longitude": -172.007996,
+    "country": "WS"
+  },
+  {
+    "id": "PRN",
+    "name": "Pristina",
+    "latitude": 42.5728,
+    "longitude": 21.035801,
+    "country": "XK"
+  },
+  {
+    "id": "CPT",
+    "name": "Cape Town",
+    "latitude": -33.97403,
+    "longitude": 18.604333,
+    "country": "ZA"
+  },
+  {
+    "id": "DUR",
+    "name": "Durban",
+    "latitude": -29.614444,
+    "longitude": 31.119722,
+    "country": "ZA"
+  },
+  {
+    "id": "GRJ",
+    "name": "George",
+    "latitude": -34.0056,
+    "longitude": 22.378902,
+    "country": "ZA"
+  },
+  {
+    "id": "JNB",
+    "name": "Johannesburg",
+    "latitude": -26.140081,
+    "longitude": 28.246801,
+    "country": "ZA"
+  },
+  {
+    "id": "PLZ",
+    "name": "Gqeberha",
+    "latitude": -33.989715,
+    "longitude": 25.617353,
+    "country": "ZA"
+  },
+  {
+    "id": "LUN",
+    "name": "Lusaka",
+    "latitude": -15.330833,
+    "longitude": 28.452722,
+    "country": "ZM"
+  },
+  {
+    "id": "HRE",
+    "name": "Harare",
+    "latitude": -17.931801,
+    "longitude": 31.0928,
+    "country": "ZW"
+  },
+  {
+    "id": "VFA",
+    "name": "Victoria Falls",
+    "latitude": -18.097437,
+    "longitude": 25.836867,
+    "country": "ZW"
+  }
+]

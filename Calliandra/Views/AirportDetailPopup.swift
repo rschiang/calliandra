@@ -28,7 +28,7 @@ struct AirportDetailPopup: View {
             }
 
             if airport.connections.isEmpty {
-                Text("No static outbound flights listed.")
+                Text("No outbound flights listed.")
                     .font(.caption)
                     .foregroundStyle(.secondary)
             } else {
@@ -52,13 +52,13 @@ struct AirportDetailPopup: View {
                 }
             }
 
-            Button("Add to Route", action: onAddToRoute)
+            Button("Add to Route", systemImage: "plus", action: onAddToRoute)
                 .buttonStyle(.borderedProminent)
         }
         .padding(14)
         .frame(width: 280)
         .background(.regularMaterial, in: RoundedRectangle(cornerRadius: 14))
-        .shadow(radius: 10)
+        .shadow(radius: 12)
     }
 }
 
