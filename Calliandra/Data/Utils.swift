@@ -4,6 +4,8 @@
 
 import SwiftUI
 import MapKit
+import CoreLocation
+import Foundation
 
 func loadFile<T: Decodable>(fileName: String) -> [T] {
     guard let url = Bundle.main.url(forResource: fileName, withExtension: "json") else {
@@ -42,4 +44,11 @@ func findBound(from: Airport, for airports: [Airport]) -> MKCoordinateRegion {
     )
 
     return MKCoordinateRegion(center: center, span: span)
+}
+
+func greatCircleMiles(from origin: Airport, to destination: Airport) -> Int {
+    let originLocation = CLLocation(latitude: origin.latitude, longitude: origin.longitude)
+    let destinationLocation = CLLocation(latitude: destination.latitude, longitude: destination.longitude)
+    let meters = originLocation.distance(from: destinationLocation)
+    return Int((meters / 1609.344).rounded())
 }

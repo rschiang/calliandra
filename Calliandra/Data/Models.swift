@@ -21,13 +21,56 @@ class Model: ObservableObject {
         let flights = flightEntities.map({ Flight.init(model: self, entity: $0) })
         flightsByOrigin = Dictionary(grouping: flights, by: \.origin)
 
-        let airports = airportEntities.filter({ flightsByOrigin[$0.id] != nil }).map({ Airport.init(model: self, entity: $0) })
+        let airports = airportEntities.map({ Airport.init(model: self, entity: $0) })
         airportsByName = Dictionary(uniqueKeysWithValues: airports.map({ ($0.id, $0) }))
 
         self.flights = flights
         self.airports = airports
         return self
     }
+
+    func airport(forCode code: String) -> Airport? {
+        airportsByName[code]
+    }
+
+    func flights(from origin: Airport, to destination: Airport) -> [Flight] {
+        (flightsByOrigin[origin.id] ?? [])
+            .filter { $0.destination == destination.id }
+            .sorted { $0.departureTime < $1.departureTime }
+    }
+
+    func mileage(from origin: Airport, to destination: Airport) -> (miles: Int, isEstimated: Bool) {
+        if let miles = flights(from: origin, to: destination).first?.miles {
+            return (miles, false)
+        }
+        return (greatCircleMiles(from: origin, to: destination), true)
+    }
+
+    func duration(from origin: Airport, to destination: Airport) -> Duration? {
+        guard let flight = flights(from: origin, to: destination).first else {
+            return nil
+        }
+
+        let formatter = DateFormatter()
+        formatter.dateFormat = "HH:mm"
+        formatter.locale = Locale(identifier: "en_US_POSIX")
+
+        guard let departure = formatter.date(from: flight.departureTime),
+              var arrival = formatter.date(from: flight.arrivalTime) else {
+            return nil
+        }
+
+        if arrival < departure {
+            arrival = Calendar.current.date(byAdding: .day, value: 1, to: arrival) ?? arrival
+        }
+
+        return Duration.seconds(arrival.timeIntervalSince(departure))
+    }
+}
+
+struct RouteStop: Identifiable, Equatable {
+    let id = UUID()
+    let airport: Airport
 }
 
 class Airport: Identifiable, Equatable, Hashable {
@@ -51,12 +94,17 @@ class Airport: Identifiable, Equatable, Hashable {
     let coordinate: CLLocationCoordinate2D
 
     var flights: [Flight] {
-        model!.flightsByOrigin[id]!
+        model?.flightsByOrigin[id] ?? []
     }
 
     lazy var connections: [Connection] = {
         let flightsByDestination = Dictionary(grouping: flights, by: \.destination)
-        return flightsByDestination.map({ Connection(origin: self, destination: model!.airportsByName[$0]!, flights: $1) }).sorted()
+        return flightsByDestination.compactMap({
+            guard let destination = model!.airportsByName[$0] else {
+                return nil
+            }
+            return Connection(origin: self, destination: destination, flights: $1)
+        }).sorted()
     }()
 
     lazy var coverage: MKCoordinateRegion = findBound(from: self, for: connections.map(\.destination))
