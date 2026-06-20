@@ -20,17 +20,13 @@ struct AirportMapView: View {
         }
     }
 
-    private var lastRouteAirport: Airport? {
-        routeStops.last?.airport
-    }
-
     private var routeAirportIDs: Set<String> {
         Set(routeStops.map(\.airport.id))
     }
 
     private var suggestedConnectionIDs: Set<String> {
-        guard let lastRouteAirport else { return [] }
-        return Set(lastRouteAirport.connections.map(\.destination.id))
+        guard let last = routeStops.last?.airport else { return [] }
+        return Set(last.connections.map(\.destination.id))
     }
 
     var sidebar: some View {
@@ -46,11 +42,11 @@ struct AirportMapView: View {
     var body: some View {
         NavigationSplitView(columnVisibility: $columnVisibility) {
             sidebar
-                .navigationSplitViewColumnWidth(min: 260, ideal: 340, max: 460)
+                .navigationSplitViewColumnWidth(min: 180, ideal: 210, max: 460)
         } detail: {
-            ZStack(alignment: .topTrailing) {
-                Map(position: $position, interactionModes: [.pan, .zoom], selection: Binding(get: { selectedAirport }, set: { selectedAirport = $0 })) {
-                    lastAirportConnections
+            ZStack(alignment: .bottomTrailing) {
+                Map(position: $position, interactionModes: [.pan, .zoom], selection: $selectedAirport) {
+                    selectedAirportConnections
                     plannedRoute
                     airportAnnotations
                 }
@@ -74,7 +70,7 @@ struct AirportMapView: View {
                         onAddToRoute: { addAirportToRoute(selectedAirport) },
                         onDismiss: { self.selectedAirport = nil }
                     )
-                    .padding(20)
+                    .padding(24)
                 }
             }
         }
@@ -82,17 +78,20 @@ struct AirportMapView: View {
         .onAppear {
             position = .region(model.coverage)
         }
-        .onChange(of: routeStops) { _, _ in
+        .onChange(of: selectedAirport) {
+            updateMapPosition()
+        }
+        .onChange(of: routeStops) {
             updateMapPosition()
         }
     }
 
     @MapContentBuilder
-    private var lastAirportConnections: some MapContent {
-        if let lastRouteAirport {
-            ForEach(lastRouteAirport.connections) { connection in
+    private var selectedAirportConnections: some MapContent {
+        if let selectedAirport {
+            ForEach(selectedAirport.connections) { connection in
                 MapPolyline(coordinates: [
-                    lastRouteAirport.coordinate,
+                    selectedAirport.coordinate,
                     connection.destination.coordinate,
                 ], contourStyle: .geodesic)
                 .stroke(.secondary.opacity(0.45), lineWidth: 0.5 + Double(min(max(connection.flights.count, 1), 6)) * 0.25)
@@ -108,7 +107,7 @@ struct AirportMapView: View {
                 pair.origin.coordinate,
                 pair.destination.coordinate,
             ], contourStyle: .geodesic)
-            .stroke(.blue, lineWidth: 3)
+            .stroke(.orange, lineWidth: 3)
         }
     }
 
@@ -120,7 +119,6 @@ struct AirportMapView: View {
                     isMajor: (airport.flights.count >= 10),
                     isSelected: (airport == selectedAirport),
                     isInRoute: routeAirportIDs.contains(airport.id),
-                    isLastRouteStop: (airport == lastRouteAirport),
                     isSuggestedConnection: suggestedConnectionIDs.contains(airport.id)
                 )
             }
@@ -133,6 +131,7 @@ struct AirportMapView: View {
     }
 
     private func addAirportToRoute(_ airport: Airport) {
+        guard routeStops.last?.airport.id != airport.id else { return }
         routeStops.append(RouteStop(airport: airport))
     }
 
@@ -142,10 +141,10 @@ struct AirportMapView: View {
 
     private func updateMapPosition() {
         withAnimation(.easeOut) {
-            if routeStops.count > 1 {
+            if let selectedAirport, selectedAirport.flights.count > 0 {
+                position = .region(selectedAirport.coverage)
+            } else if routeStops.count > 1 {
                 position = .region(findBound(from: routeStops[0].airport, for: routeStops.dropFirst().map(\.airport)))
-            } else if let lastRouteAirport {
-                position = .region(lastRouteAirport.coverage)
             } else {
                 position = .region(model.coverage)
             }

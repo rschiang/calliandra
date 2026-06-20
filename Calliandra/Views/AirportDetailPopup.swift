@@ -19,15 +19,11 @@ struct AirportDetailPopup: View {
                         .font(.title3)
                         .monospaced()
                         .foregroundStyle(.secondary)
-                    Text(airport.country)
-                        .font(.caption)
-                        .foregroundStyle(.secondary)
                 }
                 Spacer()
-                Button(action: onDismiss) {
-                    Image(systemName: "xmark.circle.fill")
-                }
+                Button("Dismiss", systemImage: "xmark.circle.fill", action: onDismiss)
                 .buttonStyle(.plain)
+                .labelStyle(.iconOnly)
                 .foregroundStyle(.secondary)
             }
 
@@ -64,4 +60,12 @@ struct AirportDetailPopup: View {
         .background(.regularMaterial, in: RoundedRectangle(cornerRadius: 14))
         .shadow(radius: 10)
     }
+}
+
+#Preview {
+    @Previewable @State var model = Model().load()
+    AirportDetailPopup(
+        airport: model.airport(forCode: "HND")!,
+        onAddToRoute: {},
+        onDismiss: {})
 }

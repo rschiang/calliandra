@@ -48,7 +48,8 @@ struct RoutePlannerPane: View {
             if !routeStops.isEmpty {
                 Button("Clear", systemImage: "xmark", action: onClearRoute)
                     .labelStyle(.iconOnly)
-                    .buttonStyle(.borderless)
+                    .buttonStyle(.plain)
+                    .foregroundStyle(.secondary)
                     .disabled(routeStops.isEmpty)
             }
         }
@@ -145,6 +146,7 @@ struct RoutePlannerPane: View {
                             .foregroundStyle(.tertiary)
                     }
                 }
+                .listRowInsets(.init(top: 8, leading: -16, bottom: 8, trailing: -16))
             }
             .onDelete { offsets in
                 routeStops.remove(atOffsets: offsets)
@@ -153,6 +155,7 @@ struct RoutePlannerPane: View {
                 routeStops.move(fromOffsets: source, toOffset: destination)
             }
         }
+        .scrollContentBackground(.hidden)
     }
 
     private func attributedAirportCode(code: String) -> AttributedString {

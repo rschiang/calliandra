@@ -30,7 +30,7 @@ class Model: ObservableObject {
     }
 
     func airport(forCode code: String) -> Airport? {
-        airportsByName[code.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()]
+        airportsByName[code]
     }
 
     func flights(from origin: Airport, to destination: Airport) -> [Flight] {
