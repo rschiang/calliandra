@@ -10,6 +10,7 @@ struct AirportMapItem : View {
     var isSelected: Bool
     var isInRoute: Bool = false
     var isSuggestedConnection: Bool = false
+    var isDataUnavailable: Bool = false
 
     var body: some View {
         Image(systemName: "airplane.circle.fill")
@@ -25,6 +26,8 @@ struct AirportMapItem : View {
         }
         if isSuggestedConnection {
             return .orange
+        } else if isDataUnavailable {
+            return .secondary.opacity(0.67)
         }
         return .accentColor
     }
@@ -38,6 +41,8 @@ struct AirportMapItem : View {
         }
         if isSuggestedConnection {
             return .orange.opacity(0.15)
+        } else if isDataUnavailable {
+            return .secondary.opacity(0.05)
         }
         return .accentColor.opacity(0.15)
     }
@@ -45,6 +50,7 @@ struct AirportMapItem : View {
 
 #Preview {
     HStackLayout(spacing: 16) {
+        AirportMapItem(isMajor: false, isSelected: false, isDataUnavailable: true)
         AirportMapItem(isMajor: false, isSelected: false)
         AirportMapItem(isMajor: true, isSelected: false)
         AirportMapItem(isMajor: true, isSelected: true)

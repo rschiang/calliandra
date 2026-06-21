@@ -116,13 +116,15 @@ struct AirportMapView: View {
         ForEach(model.airports) { airport in
             Annotation(airport.name, coordinate: airport.coordinate) {
                 AirportMapItem(
-                    isMajor: (airport.flights.count >= 10),
+                    isMajor: (airport.connections.count > 5) && (airport.flights.count >= 20),
                     isSelected: (airport == selectedAirport),
                     isInRoute: routeAirportIDs.contains(airport.id),
-                    isSuggestedConnection: suggestedConnectionIDs.contains(airport.id)
+                    isSuggestedConnection: suggestedConnectionIDs.contains(airport.id),
+                    isDataUnavailable: airport.flights.isEmpty,
                 )
             }
             .tag(airport)
+            .mapItemDetailSelectionAccessory(.callout)
         }
     }
 

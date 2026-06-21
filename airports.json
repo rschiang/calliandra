@@ -630,6 +630,13 @@
     "country": "TW"
   },
   {
+    "id": "GNI",
+    "name": "綠島",
+    "latitude": 22.673901,
+    "longitude": 121.466003,
+    "country": "TW"
+  },
+  {
     "id": "KYD",
     "name": "蘭嶼",
     "latitude": 22.027,
@@ -641,6 +648,20 @@
     "name": "澎湖",
     "latitude": 23.568701,
     "longitude": 119.627998,
+    "country": "TW"
+  },
+  {
+    "id": "CMJ",
+    "name": "七美",
+    "latitude": 23.213127,
+    "longitude": 119.417539,
+    "country": "TW"
+  },
+  {
+    "id": "WOT",
+    "name": "望安",
+    "latitude": 23.369108,
+    "longitude": 119.503598,
     "country": "TW"
   },
   {
@@ -1716,7 +1737,7 @@
   },
   {
     "id": "DEL",
-    "name": "新德里",
+    "name": "德里",
     "latitude": 28.55563,
     "longitude": 77.09519,
     "country": "IN"
@@ -1904,6 +1925,13 @@
     "country": "KM"
   },
   {
+    "id": "CJJ",
+    "name": "清州",
+    "latitude": 36.71556,
+    "longitude": 127.500289,
+    "country": "KR"
+  },
+  {
     "id": "CJU",
     "name": "濟州",
     "latitude": 33.512058,
@@ -1929,6 +1957,13 @@
     "name": "釜山",
     "latitude": 35.179501,
     "longitude": 128.938004,
+    "country": "KR"
+  },
+  {
+    "id": "TAE",
+    "name": "大邱",
+    "latitude": 35.894394,
+    "longitude": 128.656989,
     "country": "KR"
   },
   {
@@ -2814,6 +2849,13 @@
     "country": "US"
   },
   {
+    "id": "HNL",
+    "name": "檀香山",
+    "latitude": 21.318387,
+    "longitude": -157.92567,
+    "country": "US"
+  },
+  {
     "id": "IAH",
     "name": "休士頓",
     "latitude": 29.9844,
@@ -2860,6 +2902,13 @@
     "name": "明尼亞波利斯",
     "latitude": 44.880081,
     "longitude": -93.221741,
+    "country": "US"
+  },
+  {
+    "id": "ONT",
+    "name": "安大略",
+    "latitude": 34.056,
+    "longitude": -117.600998,
     "country": "US"
   },
   {
@@ -2958,6 +3007,13 @@
     "name": "河內",
     "latitude": 21.221201,
     "longitude": 105.806999,
+    "country": "VN"
+  },
+  {
+    "id": "PQC",
+    "name": "富國島",
+    "latitude": 10.169783,
+    "longitude": 103.99353,
     "country": "VN"
   },
   {
