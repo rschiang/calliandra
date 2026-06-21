@@ -42,7 +42,7 @@ struct AirportMapView: View {
     var body: some View {
         NavigationSplitView(columnVisibility: $columnVisibility) {
             sidebar
-                .navigationSplitViewColumnWidth(min: 180, ideal: 210, max: 460)
+                .navigationSplitViewColumnWidth(min: 180, ideal: 240, max: 360)
         } detail: {
             ZStack(alignment: .bottomTrailing) {
                 Map(position: $position, interactionModes: [.pan, .zoom], selection: $selectedAirport) {
@@ -141,8 +141,10 @@ struct AirportMapView: View {
 
     private func updateMapPosition() {
         withAnimation(.easeOut) {
-            if let selectedAirport, selectedAirport.flights.count > 0 {
-                position = .region(selectedAirport.coverage)
+            if let selectedAirport {
+                if selectedAirport.flights.count > 0 {
+                    position = .region(selectedAirport.coverage)
+                }
             } else if routeStops.count > 1 {
                 position = .region(findBound(from: routeStops[0].airport, for: routeStops.dropFirst().map(\.airport)))
             } else {

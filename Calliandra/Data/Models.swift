@@ -12,7 +12,8 @@ class Model: ObservableObject {
     fileprivate var airportsByName: [String: Airport] = [:]
     fileprivate var flightsByOrigin: [String: [Flight]] = [:]
 
-    lazy var coverage: MKCoordinateRegion = findBound(from: airports.first!, for: airports)
+    lazy var coverage: MKCoordinateRegion = findBound(from: airportsByName["KHH"]!,
+                                                      for: [airportsByName["WKJ"]!])
 
     func load() -> Self {
         let airportEntities: [AirportEntity] = loadFile(fileName: "airports")
