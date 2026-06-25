@@ -1,0 +1,91 @@
+{
+  "fill" : {
+    "automatic-gradient" : "srgb:0.58082,0.08843,0.31864,1.00000",
+    "orientation" : {
+      "start" : {
+        "x" : 0.5,
+        "y" : 0
+      },
+      "stop" : {
+        "x" : 0.5,
+        "y" : 0.7
+      }
+    }
+  },
+  "groups" : [
+    {
+      "layers" : [
+        {
+          "fill" : {
+            "solid" : "extended-srgb:1.00000,0.80000,0.00000,1.00000"
+          },
+          "image-name" : "inner_core.svg",
+          "name" : "inner_core"
+        },
+        {
+          "fill" : {
+            "solid" : "srgb:0.58082,0.08843,0.31864,1.00000"
+          },
+          "image-name" : "outer_core.svg",
+          "name" : "outer_core"
+        }
+      ],
+      "lighting" : "individual",
+      "shadow" : {
+        "kind" : "layer-color",
+        "opacity" : 0.75
+      },
+      "specular" : true,
+      "translucency" : {
+        "enabled" : true,
+        "value" : 0.5
+      }
+    },
+    {
+      "blend-mode" : "overlay",
+      "blur-material" : 0.67,
+      "layers" : [
+        {
+          "fill" : "automatic",
+          "image-name" : "inner_ring.svg",
+          "name" : "inner_ring"
+        }
+      ],
+      "lighting" : "individual",
+      "shadow" : {
+        "kind" : "neutral",
+        "opacity" : 0.85
+      },
+      "specular" : true,
+      "translucency" : {
+        "enabled" : true,
+        "value" : 0.5
+      }
+    },
+    {
+      "blend-mode" : "normal",
+      "blur-material" : 0.5,
+      "layers" : [
+        {
+          "fill" : "automatic",
+          "image-name" : "outer_ring.svg",
+          "name" : "outer_ring"
+        }
+      ],
+      "shadow" : {
+        "kind" : "neutral",
+        "opacity" : 0.85
+      },
+      "translucency" : {
+        "enabled" : true,
+        "value" : 0.67
+      }
+    }
+  ],
+  "supported-platforms" : {
+    "circles" : [
+      "watchOS"
+    ],
+    "squares" : "shared"
+  }
+}
